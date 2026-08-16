@@ -82,6 +82,25 @@
   .doc strong { color: #16335A; }
   .doc hr { border: none; border-top: 1px solid #D5DCE6; margin: 22px 0; }
   .doc em { color: #6B7689; font-size: 14px; }
+  .plan-tablo {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 18px;
+    font-size: 14px;
+  }
+  .plan-tablo th, .plan-tablo td {
+    border: 1px solid #D5DCE6;
+    padding: 9px 11px;
+    text-align: left;
+  }
+  .plan-tablo th {
+    background: #16335A;
+    color: #fff;
+    font-weight: 600;
+  }
+  .plan-tablo tr:nth-child(even) { background: #FAFBFD; }
+  .plan-tablo td.evet { color: #0F7B4F; font-weight: 700; }
+  .plan-tablo td.hayir { color: #9AA3B2; }
   .footer {
     text-align: center;
     padding: 24px;
@@ -105,52 +124,60 @@
     <button class="tab" onclick="showDoc('hesapsil', this)">Hesap Silme</button>
   </div>
   <div class="content">
+
+    <!-- ══════════════════ HAKKIMIZDA ══════════════════ -->
     <div class="doc active" id="hakkimizda"><h1>HAKKIMIZDA</h1>
 <p>Pivot'u, sınav sürecinin dağınıklığını ve motivasyon zorluğunu bizzat yaşamış iki kurucu geliştirdi: <strong>Ela Ensari</strong> ve <strong>Mehmet Nurullah Tek</strong>. Amacımız basit: öğrencilerin onlarca farklı araç yerine tek bir yerde disiplinli çalışabileceği, birbirini motive eden bir alan sunmak.</p>
 <p>Sınıfça ve bireysel çalışma alanlarından lig'e, aylık/günlük çalışma programlarından soru tekrarlarına, veli/öğretmen denetiminden deneme analizlerine kadar her özelliği bu hedefle tasarlıyoruz.</p>
 <p>Pivot, bu ekip tarafından geliştirilmeye ve iyileştirilmeye devam ediyor. Görüş ve önerileriniz için: pivotdestek@gmail.com</p>
 <hr />
 <p><em>Hizmete ilişkin veri sorumlusu ve iletişim adresi: pivotdestek@gmail.com</em></p></div>
+
+    <!-- ══════════════════ GİZLİLİK ══════════════════ -->
     <div class="doc" id="gizlilik"><h1>PIVOT GİZLİLİK POLİTİKASI</h1>
-<p><strong>Son güncelleme:</strong> 20.07.2026</p>
+<p><strong>Son güncelleme:</strong> 14.08.2026</p>
 <p>Bu Gizlilik Politikası, Pivot mobil uygulamasını ("Uygulama", "Pivot") kullandığınızda kişisel verilerinizin nasıl toplandığını, kullanıldığını, saklandığını ve korunduğunu açıklar. Pivot'u kullanarak bu politikada açıklanan uygulamaları kabul etmiş olursunuz.</p>
 <hr />
 <h2>1. Topladığımız Veriler</h2>
-<p>Pivot, size hizmet sunabilmek için aşağıdaki verileri toplar:</p>
-<h3>2.1. Hesap ve Profil Bilgileri</h3>
+<h3>1.1. Hesap ve Profil Bilgileri</h3>
 <ul>
-<li>E-posta adresi</li>
+<li>E-posta adresi (kayıt sırasında doğrulanır)</li>
 <li>Ad ve soyad</li>
 <li>Doğum tarihi</li>
 <li>Cinsiyet</li>
 <li>Yaşadığınız şehir (isteğe bağlı)</li>
-<li>Sınıf düzeyi ve sınav türü (LGS / YKS)</li>
+<li>Sınav türü (LGS / YKS) ve alan bilgisi</li>
 <li>Hedef okul/bölüm bilgileri (isteğe bağlı)</li>
+<li>Kendinizi tanıttığınız kısa metin (bio — isteğe bağlı)</li>
 </ul>
-<h3>2.2. Kullanım ve Çalışma Verileri</h3>
+<h3>1.2. Kullanım ve Çalışma Verileri</h3>
 <ul>
 <li>Çalışma süreleri ve kronometre kayıtları</li>
-<li>Yapay zeka koç ile yapılan sohbet geçmişi</li>
-<li>Soru defterine kaydedilen sorular ve çözümler</li>
-<li>Soru fotoğrafları (yüklediğiniz takdirde — cihazınızın yerel depolama alanında saklanır, sunucularımıza yüklenmez)</li>
+<li>Yapay zekâ koç ile yapılan sohbet geçmişi</li>
+<li>Soru defterine kaydedilen sorular, çözümler ve tekrar takvimi</li>
 <li>Deneme sınavı sonuçları ve analizleri</li>
 <li>Oluşturduğunuz çalışma programları</li>
 <li>Çalışma odası ve sınıf etkinlikleriniz</li>
-<li>Abonelik ve kullanım hakkı verileri: üyelik seviyeniz (ücretsiz / Disiplin / Ekstra / Pro), abonelik ve deneme durumunuz ile aylık yapay zeka kullanım sayaçlarınız</li>
+<li>Etüt panosuna gönderdiğiniz mesajlar ve fotoğraflar</li>
+<li>Abonelik ve kullanım hakkı verileri: üyelik seviyeniz (ücretsiz / Disiplin / Ekstra / Pro), abonelik ve deneme durumunuz ile aylık yapay zekâ kullanım sayaçlarınız</li>
 </ul>
-<h3>2.3. Teknik Veriler</h3>
+<h3>1.3. Teknik Veriler</h3>
 <ul>
 <li>Cihaz bildirim kimliği (bildirim göndermek için)</li>
 <li>Uygulama içi etkinlik ve oturum bilgileri</li>
 </ul>
 <p>Pivot; kimlik numarası, adres, telefon numarası, banka/kart bilgisi gibi hassas verileri <strong>toplamaz</strong>. Ödeme işlemleri tamamen Google Play altyapısı üzerinden yürütülür ve kart bilgilerinize erişimimiz yoktur.</p>
-<p><strong>Soru fotoğrafları:</strong> Soru Defteri'ne eklediğiniz fotoğraflar cihazınızın yerel depolama alanında saklanır; sunucularımıza veya bulut depolama hizmetlerine yüklenmez. Uygulamayı silmeniz veya cihaz verilerini temizlemeniz hâlinde bu fotoğraflar geri getirilemez şekilde silinir; soru metinleriniz ve tekrar takviminiz hesabınızda korunur. Yapay zekaya soru çözdürme sırasında gönderdiğiniz fotoğraf, yalnızca çözümün üretilmesi amacıyla yapay zeka sağlayıcısına iletilir ve tarafımızca saklanmaz. <em>(Geçiş notu: Bu güncellemeden önce kaydedilmiş sınırlı sayıda fotoğraf bulut altyapısında yer alabilir; bu kayıtlar, ilgili soru silindiğinde veya öğrenildiğinde kalıcı olarak silinir.)</em></p>
 <hr />
-<h2>2. Verileri Kullanma Amaçlarımız</h2>
-<p>Topladığımız verileri yalnızca aşağıdaki amaçlarla kullanırız:</p>
+<h2>2. Fotoğraflar Nerede Saklanıyor?</h2>
+<p>Bu konuda iki farklı durum var; ikisini de açıkça belirtiyoruz:</p>
+<p><strong>Soru Defteri fotoğrafları — CİHAZINIZDA kalır.</strong> Soru Defteri'ne eklediğiniz fotoğraflar telefonunuzun kendi kalıcı depolama alanında saklanır; sunucularımıza veya herhangi bir bulut hizmetine <strong>yüklenmez</strong>. Uygulamayı silmeniz, cihazınızı sıfırlamanız veya telefon değiştirmeniz hâlinde bu fotoğraflar geri getirilemez şekilde silinir. Soru metinleriniz, ders/konu bilgisi ve 1-3-7 tekrar takviminiz hesabınızda korunur.</p>
+<p><strong>Etüt panosu fotoğrafları — sunucuda saklanır.</strong> Etüt panosuna gönderdiğiniz fotoğraflar Google Firebase Storage üzerinde tutulur; sınıf arkadaşlarınız tarafından görülebilir. Bu fotoğraflar gönderilmeden önce otomatik içerik denetiminden (Google Cloud Vision) geçirilir ve belirli bir süre sonra sistemden silinir.</p>
+<p><strong>Yapay zekâya çözdürme.</strong> Soru çözdürme sırasında gönderdiğiniz fotoğraf, yalnızca çözümün üretilmesi amacıyla yapay zekâ sağlayıcısına iletilir ve tarafımızca saklanmaz.</p>
+<hr />
+<h2>3. Verileri Kullanma Amaçlarımız</h2>
 <ul>
 <li>Hesabınızı oluşturmak ve yönetmek</li>
-<li>Size kişiselleştirilmiş çalışma deneyimi sunmak (yapay zeka koç, program, analiz)</li>
+<li>Size kişiselleştirilmiş çalışma deneyimi sunmak (yapay zekâ koç, program, analiz)</li>
 <li>Çalışma istatistiklerinizi ve gelişiminizi göstermek</li>
 <li>Çalışma odaları ve lig özelliklerini sağlamak</li>
 <li>Uygulamayı geliştirmek ve teknik sorunları gidermek</li>
@@ -159,40 +186,62 @@
 </ul>
 <p>Verilerinizi reklam amacıyla <strong>satmayız</strong> ve üçüncü taraflara pazarlama amacıyla <strong>devretmeyiz</strong>.</p>
 <hr />
-<h2>3. Üçüncü Taraf Hizmetler</h2>
-<p>Pivot, hizmet sunabilmek için aşağıdaki güvenilir üçüncü taraf hizmetlerini kullanır. Bu hizmetlerin kendi gizlilik politikaları geçerlidir:</p>
+<h2>4. Üçüncü Taraf Hizmetler</h2>
 <ul>
-<li><strong>Google Firebase</strong> (Google LLC): Kimlik doğrulama, veritabanı ve bildirim altyapısı</li>
-<li><strong>Google Gemini</strong> (Google LLC): Yapay zeka koç ve soru çözme özelliği</li>
+<li><strong>Google Firebase</strong> (Google LLC): Kimlik doğrulama, veritabanı, dosya depolama ve bildirim altyapısı</li>
+<li><strong>Google Gemini</strong> (Google LLC): Yapay zekâ koç ve soru çözme özelliği</li>
+<li><strong>Google Cloud Vision</strong> (Google LLC): Etüt panosuna gönderilen fotoğrafların otomatik içerik denetimi</li>
 <li><strong>Google/YouTube API</strong> (Google LLC): Çalışma programlarında video içeriği</li>
-<li><strong>Cloudinary</strong>: Yüklediğiniz soru fotoğraflarının saklanması</li>
-<li><strong>RevenueCat, Inc.</strong>: Abonelik satın alma, yenileme, deneme ve iptal durumlarının doğrulanması ve yönetilmesi</li>
+<li><strong>RevenueCat, Inc.</strong>: Abonelik satın alma, yenileme, deneme ve iptal durumlarının doğrulanması</li>
 </ul>
 <p>Bu hizmetlere yalnızca ilgili özelliğin çalışması için gerekli veriler aktarılır. Verileriniz, bu hizmet sağlayıcıların sunucularında (yurt dışında bulunabilir) işlenebilir.</p>
-<p><strong>RevenueCat:</strong> Abonelik satın alma, yenileme, deneme ve iptal durumlarının doğrulanması ve yönetilmesi için RevenueCat, Inc. altyapısını kullanırız. Bu kapsamda RevenueCat ile anonim kullanıcı tanımlayıcısı ve mağaza satın alma bilgileri (abonelik durumu, ürün, tarih) paylaşılır; ödeme aracı bilgileriniz (kart numarası vb.) ne tarafımızca ne de RevenueCat tarafından görülür — ödemeler tamamen Google Play tarafından işlenir. Ayrıntı için RevenueCat gizlilik politikasına bakabilirsiniz: https://www.revenuecat.com/privacy</p>
+<p><strong>RevenueCat:</strong> Abonelik durumunun doğrulanması için RevenueCat, Inc. altyapısını kullanırız. Bu kapsamda anonim kullanıcı tanımlayıcısı ve mağaza satın alma bilgileri (abonelik durumu, ürün, tarih) paylaşılır; ödeme aracı bilgileriniz (kart numarası vb.) ne tarafımızca ne de RevenueCat tarafından görülür — ödemeler tamamen Google Play tarafından işlenir. Ayrıntı: https://www.revenuecat.com/privacy</p>
 <hr />
-<h2>4. Yapay Zeka Özellikleri Hakkında</h2>
-<p>Pivot'un yapay zeka koç ve soru çözme özellikleri, Google Gemini teknolojisini kullanır. Bu özellikleri kullandığınızda, gönderdiğiniz mesajlar ve sorular işlenmek üzere Google'ın sunucularına iletilir. Yapay zeka tarafından verilen yanıtlar bilgilendirme amaçlıdır ve her zaman doğru olmayabilir; önemli kararlar için öğretmenlerinize danışmanızı öneririz.</p>
-<p>Yapay zeka koç ile yaptığınız sohbet geçmişi, size kesintisiz hizmet sunabilmek için hesabınıza bağlı olarak saklanır.</p>
+<h2>5. Denetmen Sistemi ve Görünürlük</h2>
+<p>Bir veli veya öğretmeni "denetmen" olarak kabul ederseniz, o kişi hesabınızla ilgili <strong>sınırlı</strong> bilgilere erişir. Ne gördüğü ve ne görmediği aşağıda açıkça belirtilmiştir:</p>
+<p><strong>Denetmenin GÖRDÜKLERİ:</strong></p>
+<ul>
+<li>Kronometre kayıtlarınız ve ders bazlı çalışma dağılımınız</li>
+<li>Programlarınızda yüzde kaç ilerlediğiniz (program adı ve tamamlanma oranı)</li>
+<li>Deneme sınavı sonuçlarınız ve analizleriniz</li>
+<li>Aylık özet rapor</li>
+</ul>
+<p><strong>Denetmenin GÖRMEDİKLERİ:</strong></p>
+<ul>
+<li>Programlarınızın içeriği (hangi gün hangi konuyu çalışacağınız)</li>
+<li>Soru defteriniz ve içindeki sorular</li>
+<li>Hangi sınıfta olduğunuz veya sınıf etkinlikleriniz</li>
+<li>Etüt panosundaki mesajlarınız</li>
+<li>Yapay zekâ koç sohbetleriniz</li>
+</ul>
+<p>Denetmen bağlantısı yalnızca <strong>siz onayladığınızda</strong> kurulur ve istediğiniz an uygulama içinden kaldırılabilir. Denetmen eklemek zorunlu değildir.</p>
+<p><strong>Herkese açık profil:</strong> Ad-soyadınız, avatarınız, puanınız ve lig sıralamanız uygulamayı kullanan diğer öğrenciler tarafından görülebilir. Doğum tarihi, şehir, hedef okul gibi bilgilerin görünürlüğünü uygulama içindeki gizlilik ayarlarından kapatabilirsiniz.</p>
 <hr />
-<h2>5. 18 Yaşından Küçük Kullanıcılar</h2>
+<h2>6. Yapay Zekâ Özellikleri Hakkında</h2>
+<p>Pivot'un yapay zekâ koç ve soru çözme özellikleri, Google Gemini teknolojisini kullanır. Bu özellikleri kullandığınızda, gönderdiğiniz mesajlar ve sorular işlenmek üzere Google'ın sunucularına iletilir. Yapay zekâ tarafından verilen yanıtlar bilgilendirme amaçlıdır ve her zaman doğru olmayabilir; önemli kararlar için öğretmenlerinize danışmanızı öneririz.</p>
+<p>Yapay zekâ koç ile yaptığınız sohbet geçmişi, size kesintisiz hizmet sunabilmek için hesabınıza bağlı olarak saklanır.</p>
+<hr />
+<h2>7. 18 Yaşından Küçük Kullanıcılar</h2>
 <p>Pivot, ağırlıklı olarak ortaokul ve lise öğrencilerine yönelik bir eğitim uygulamasıdır ve 18 yaşından küçük kullanıcılar tarafından kullanılabilir. Çocukların gizliliğini özellikle önemsiyoruz:</p>
 <ul>
 <li>13 yaşından küçük çocuklar uygulamaya kayıt olamaz.</li>
+<li>Etüt panosu (öğrencilerin birbirine soru sorduğu ortak alan) yalnızca <strong>15 yaşını doldurmuş YKS öğrencilerine</strong> açıktır.</li>
 <li>18 yaşından küçük kullanıcıların uygulamayı bir ebeveyn veya yasal velinin bilgisi ve onayı dahilinde kullanmasını öneririz.</li>
 <li>Çocuklardan yalnızca eğitim hizmetinin sunulması için gerekli asgari veriyi toplarız.</li>
 <li>Çocuklara yönelik davranışsal reklam göstermeyiz.</li>
 </ul>
-<p>Bir ebeveyn veya veli iseniz ve çocuğunuzun bilginiz dışında veri paylaştığını düşünüyorsanız, pivotdestek@gmail.com adresinden bize ulaşarak verilerin silinmesini talep edebilirsiniz.</p>
+<p>Ebeveyn veya veli iseniz ve çocuğunuzun bilginiz dışında veri paylaştığını düşünüyorsanız, pivotdestek@gmail.com adresinden bize ulaşarak verilerin silinmesini talep edebilirsiniz.</p>
 <hr />
-<h2>6. Veri Güvenliği</h2>
+<h2>8. İçerik Güvenliği</h2>
+<p>Kullanıcıların birbirini görebildiği alanlarda (ad-soyad, bio, sınıf adları, Etüt mesajları) otomatik içerik denetimi uygulanır: küfür, hakaret, telefon numarası, sosyal medya hesabı ve bağlantı paylaşımı engellenir. Etüt panosundaki fotoğraflar ayrıca Google Cloud Vision ile otomatik denetimden geçer. Kullanıcılar uygunsuz içerikleri şikâyet edebilir ve istedikleri kişiyi engelleyebilir.</p>
+<hr />
+<h2>9. Veri Güvenliği</h2>
 <p>Verilerinizin güvenliği için endüstri standardı önlemler alıyoruz. Veriler şifreli bağlantılar üzerinden iletilir ve güvenli sunucularda (Google Firebase altyapısı) saklanır. Ancak hiçbir internet hizmetinin %100 güvenli olmadığını hatırlatırız; mümkün olan en yüksek korumayı sağlamak için sürekli çalışıyoruz.</p>
 <hr />
-<h2>7. Verilerin Saklanma Süresi</h2>
-<p>Kişisel verileriniz, hesabınız aktif olduğu sürece saklanır. Hesabınızı sildiğinizde, verileriniz makul bir süre içinde sistemlerimizden kalıcı olarak silinir. Yasal yükümlülükler gereği belirli verilerin daha uzun süre saklanması gerekebilir.</p>
+<h2>10. Verilerin Saklanma Süresi</h2>
+<p>Kişisel verileriniz, hesabınız aktif olduğu sürece saklanır. Hesabınızı sildiğinizde 30 günlük bir bekleme süresi başlar; bu süre içinde giriş yaparsanız silme talebi iptal edilir. Süre dolduğunda verileriniz sistemlerimizden kalıcı olarak silinir. Yasal yükümlülükler gereği belirli verilerin daha uzun süre saklanması gerekebilir.</p>
 <hr />
-<h2>8. Haklarınız</h2>
-<p>Kişisel verilerinizle ilgili olarak aşağıdaki haklara sahipsiniz:</p>
+<h2>11. Haklarınız</h2>
 <ul>
 <li>Verilerinize erişim talep etme</li>
 <li>Yanlış verilerin düzeltilmesini isteme</li>
@@ -202,29 +251,27 @@
 </ul>
 <p>Bu haklarınızı kullanmak için pivotdestek@gmail.com adresinden bize ulaşabilirsiniz. Uygulama içinden de hesabınızı silebilirsiniz.</p>
 <hr />
-<h2>9. Politika Değişiklikleri</h2>
+<h2>12. Politika Değişiklikleri</h2>
 <p>Bu Gizlilik Politikası zaman zaman güncellenebilir. Önemli değişiklikler olduğunda sizi uygulama üzerinden veya e-posta yoluyla bilgilendiririz. Güncel politikayı her zaman uygulama içinden inceleyebilirsiniz.</p>
 <hr />
-<h2>10. İletişim</h2>
-<p>Gizlilik Politikası ile ilgili her türlü soru ve talebiniz için:</p>
-<p>E-posta: pivotdestek@gmail.com
-Veri Sorumlusu: Mehmet Nurullah TEK</p>
-<hr />
-<h2>11. Veri Sorumlusu ve İletişim</h2>
-<p>Pivot uygulamasının veri sorumlusu Mehmet Nurullah TEK'tir. Kişisel verileriniz veya Gizlilik Politikası ile ilgili her türlü soru, talep ve başvurunuz için aşağıdaki adresten bize ulaşabilirsiniz:</p>
+<h2>13. Veri Sorumlusu ve İletişim</h2>
+<p>Pivot uygulamasının veri sorumlusu Mehmet Nurullah TEK'tir.</p>
 <p><strong>İletişim:</strong> pivotdestek@gmail.com</p>
 <hr />
-<p><em>Bu politika 20.07.2026 tarihinde yürürlüğe girmiştir.</em></p></div>
+<p><em>Bu politika 14.08.2026 tarihinde güncellenmiştir.</em></p></div>
+
+    <!-- ══════════════════ KULLANIM ŞARTLARI ══════════════════ -->
     <div class="doc" id="kullanim"><h1>PIVOT KULLANIM ŞARTLARI</h1>
-<p><strong>Son güncelleme:</strong> 20.07.2026</p>
+<p><strong>Son güncelleme:</strong> 14.08.2026</p>
 <p>Bu Kullanım Şartları ("Şartlar"), Pivot mobil uygulamasını ("Uygulama", "Pivot") kullanımınızı düzenler. Uygulamayı indirerek, hesap oluşturarak veya kullanarak bu Şartları kabul etmiş sayılırsınız. Şartları kabul etmiyorsanız lütfen uygulamayı kullanmayınız.</p>
 <hr />
 <h2>1. Hizmetin Tanımı</h2>
-<p>Pivot, ortaokul ve lise öğrencilerine (LGS ve YKS sınavlarına hazırlananlar) yönelik bir eğitim ve çalışma takibi uygulamasıdır. Uygulama; yapay zeka destekli koçluk, soru defteri, çalışma programı oluşturma, deneme analizi, çalışma odaları, kronometre ve istatistik gibi özellikler sunar.</p>
+<p>Pivot, ortaokul ve lise öğrencilerine (LGS ve YKS sınavlarına hazırlananlar) yönelik bir eğitim ve çalışma takibi uygulamasıdır. Uygulama; yapay zekâ destekli koçluk, soru defteri, çalışma programı oluşturma, deneme analizi, çalışma odaları, kronometre ve istatistik gibi özellikler sunar.</p>
 <hr />
 <h2>2. Hesap Oluşturma ve Kullanım</h2>
 <ul>
 <li>Uygulamayı kullanmak için bir hesap oluşturmanız gerekir.</li>
+<li>Kayıt sırasında verdiğiniz e-posta adresi doğrulanır; doğrulama tamamlanmadan uygulamayı kullanamazsınız.</li>
 <li>Kayıt sırasında doğru ve güncel bilgiler vermeniz gerekir.</li>
 <li>13 yaşından küçükseniz uygulamaya kayıt olamazsınız.</li>
 <li>18 yaşından küçükseniz, uygulamayı bir ebeveyn veya yasal velinizin onayıyla kullanmanız gerekir.</li>
@@ -234,26 +281,49 @@ Veri Sorumlusu: Mehmet Nurullah TEK</p>
 <hr />
 <h2>3. Üyelik Seviyeleri</h2>
 <p>Pivot'ta dört üyelik seviyesi bulunur:</p>
-<p><strong>Ücretsiz üyelik:</strong> Kronometre ile bireysel çalışma, lig sıralamasında yer alma, şifresiz (herkese açık) sınıflara katılma ve analiz sayfasında tahmini sıralama hesaplama özelliklerini içerir. Yapay zeka özellikleri, çalışma programı, deneme kaydı, soru defteri, sınıf kurma, şifreli sınıflara katılma ve denetmen bağlantısı ücretsiz üyelikte yer almaz.</p>
-<p><strong>Disiplin aboneliği:</strong> Ücretsiz üyeliğin tamamına ek olarak; kişisel çalışma programı, deneme kaydı ve detaylı analiz, soru defteri (1-3-7 tekrar sistemi), sınıf kurma, şifreli sınıflara katılma ve denetmen bağlantısını içerir. Yapay zekâ özellikleri (koç ve soru çözdürme) Disiplin aboneliğinde yer almaz.</p>
-<p><strong>Ekstra aboneliği:</strong> Disiplin aboneliğinin tamamına ek olarak aylık 300 yapay zekâ koç mesajı ve sohbet geçmişini indirme özelliğini içerir. Yapay zekâya soru çözdürme Ekstra aboneliğinde yer almaz.</p>
-<p><strong>Pro abonelik:</strong> Ekstra aboneliğinin tamamına ek olarak aylık 550 yapay zekâ koç mesajı (300 yerine) ve aylık 150 yapay zekâya soru çözdürme hakkını içerir.</p>
-<p>Mesaj ve soru çözdürme hakları aylık havuz olarak tanımlanır ve abonelik yenilenme gününde tazelenir. Kullanılmayan haklar bir sonraki döneme devreder; ancak devreden miktar hiçbir zaman bir aylık havuz tutarını aşamaz (örneğin Pro abonelikte en fazla 1.100 mesaj ve 300 çözüm hakkı birikebilir). Abonelik sona erdiğinde kullanılmamış ve devretmiş haklar da sona erer; ücret iadesine konu edilemez.</p>
-<p>Uygulamanın erken erişim döneminde, seviye ayrımı olmaksızın tüm özellikler ve sınırlı bir yapay zeka kullanım havuzu tüm kullanıcılara tanıtım amaçlı olarak ücretsiz sunulabilir. Erken erişim dönemi ve bu dönemde sunulan haklar lansmana özeldir; DereceLab bu dönemi önceden duyurarak sonlandırma ve kullanıcıları yukarıdaki üyelik seviyelerine geçirme hakkını saklı tutar. Erken erişim döneminde oluşturulan veriler silinmez; ücretsiz üyeliğe geçen kullanıcılar mevcut program ve soru kayıtlarını görüntülemeye devam eder, yeni içerik oluşturmak için abonelik gerekir.</p>
+
+<table class="plan-tablo">
+  <tr>
+    <th>Özellik</th>
+    <th>Ücretsiz</th>
+    <th>Disiplin</th>
+    <th>Ekstra</th>
+    <th>Pro</th>
+  </tr>
+  <tr><td>Kronometre ve çalışma istatistikleri</td><td class="evet">✓</td><td class="evet">✓</td><td class="evet">✓</td><td class="evet">✓</td></tr>
+  <tr><td>Pivot Ligi sıralaması</td><td class="evet">✓</td><td class="evet">✓</td><td class="evet">✓</td><td class="evet">✓</td></tr>
+  <tr><td>Şifresiz sınıflara katılma</td><td class="evet">✓</td><td class="evet">✓</td><td class="evet">✓</td><td class="evet">✓</td></tr>
+  <tr><td>Tahmini sıralama hesaplama</td><td class="evet">✓</td><td class="evet">✓</td><td class="evet">✓</td><td class="evet">✓</td></tr>
+  <tr><td>Çalışma programı</td><td class="hayir">—</td><td class="evet">✓</td><td class="evet">✓</td><td class="evet">✓</td></tr>
+  <tr><td>Deneme kaydı ve analizi</td><td class="hayir">—</td><td class="evet">✓</td><td class="evet">✓</td><td class="evet">✓</td></tr>
+  <tr><td>Soru defteri (1-3-7 tekrar)</td><td class="hayir">—</td><td class="evet">✓</td><td class="evet">✓</td><td class="evet">✓</td></tr>
+  <tr><td>Sınıf kurma</td><td class="hayir">—</td><td class="evet">✓</td><td class="evet">✓</td><td class="evet">✓</td></tr>
+  <tr><td>Şifreli sınıflara katılma</td><td class="hayir">—</td><td class="evet">✓</td><td class="evet">✓</td><td class="evet">✓</td></tr>
+  <tr><td>Denetmen bağlantısı</td><td class="hayir">—</td><td class="evet">✓</td><td class="evet">✓</td><td class="evet">✓</td></tr>
+  <tr><td>Etüt'e metin mesajı</td><td class="hayir">—</td><td class="evet">✓</td><td class="evet">✓</td><td class="evet">✓</td></tr>
+  <tr><td>Yapay zekâ koç</td><td class="hayir">—</td><td class="hayir">—</td><td>300 mesaj/ay</td><td>350 mesaj/ay</td></tr>
+  <tr><td>Sohbet geçmişini indirme</td><td class="hayir">—</td><td class="hayir">—</td><td class="evet">✓</td><td class="evet">✓</td></tr>
+  <tr><td>Etüt'e fotoğraf gönderme</td><td class="hayir">—</td><td class="hayir">—</td><td class="evet">✓</td><td class="evet">✓</td></tr>
+  <tr><td>Yapay zekâya soru çözdürme</td><td class="hayir">—</td><td class="hayir">—</td><td class="hayir">—</td><td>100 çözüm/ay</td></tr>
+</table>
+
+<p><strong>Etüt panosu ayrıca yaş ve sınav şartına tabidir:</strong> plan seviyeniz ne olursa olsun, Etüt'ü yalnızca 15 yaşını doldurmuş YKS öğrencileri kullanabilir.</p>
+
+<p><strong>Aylık haklar ve devir:</strong> Mesaj ve soru çözdürme hakları aylık havuz olarak tanımlanır ve abonelik yenilenme gününde (30 günlük dönemlerle) tazelenir. Kullanılmayan haklar bir sonraki döneme devreder; ancak devreden miktar hiçbir zaman bir aylık havuz tutarını aşamaz — yani cebinizde en fazla iki aylık hak birikebilir (Pro'da en çok 700 mesaj ve 200 çözüm). Aboneliğinize <strong>2 aydan uzun ara verirseniz</strong> birikmiş haklar sıfırlanır. Abonelik sona erdiğinde kullanılmamış ve devretmiş haklar da sona erer; ücret iadesine konu edilemez.</p>
+
+<p><strong>Erken erişim dönemi:</strong> Uygulamanın erken erişim döneminde, seviye ayrımı olmaksızın tüm özellikler ve sınırlı bir yapay zekâ kullanım havuzu tüm kullanıcılara tanıtım amaçlı olarak ücretsiz sunulabilir. Bu dönem ve sunulan haklar lansmana özeldir; Pivot bu dönemi önceden duyurarak sonlandırma ve kullanıcıları yukarıdaki üyelik seviyelerine geçirme hakkını saklı tutar. Erken erişim döneminde oluşturulan veriler silinmez; ücretsiz üyeliğe geçen kullanıcılar mevcut program ve soru kayıtlarını görüntülemeye devam eder, yeni içerik oluşturmak için abonelik gerekir.</p>
 <hr />
 <h2>4. Abonelik, Ödeme ve İptal</h2>
 <ul>
 <li>Premium abonelik ödemeleri <strong>Google Play</strong> üzerinden gerçekleştirilir. Pivot, kart veya ödeme bilgilerinize erişmez.</li>
-<li>Abonelik ücretleri ve süreleri uygulama içindeki abonelik ekranında belirtilir.</li>
-<li>Abonelikler, siz iptal etmediğiniz sürece dönem sonunda otomatik olarak yenilenebilir.</li>
-<li>Aboneliğinizi istediğiniz zaman Google Play hesap ayarlarınızdan veya uygulama içinden iptal edebilirsiniz.</li>
+<li>Güncel aylık fiyatlar: <strong>Disiplin 189₺ · Ekstra 309₺ · Pro 449₺</strong> (fiyatlara yasal vergiler dahildir).</li>
+<li>Abonelikler, dönem sonundan en az 24 saat önce iptal edilmediği sürece her ay otomatik olarak yenilenir.</li>
+<li>Aboneliğinizi istediğiniz zaman Google Play &gt; Ödemeler ve Abonelikler menüsünden iptal edebilirsiniz; iptal, mevcut ödenmiş dönemin sonunda yürürlüğe girer ve o döneme ait ücret iade edilmez.</li>
 <li>İptal ettiğinizde, mevcut ödenmiş dönem sonuna kadar premium özelliklerden yararlanmaya devam edersiniz; dönem sonunda üyeliğiniz ücretsiz seviyeye döner.</li>
-<li>İade talepleri, Google Play'in iade politikalarına tabidir.</li>
-<li>Fiyatlar zaman zaman güncellenebilir; mevcut abonelere değişiklikler önceden bildirilir.</li>
-<li><strong>Ödeme ve otomatik yenileme:</strong> Abonelik ödemeleri Google Play (ileride App Store) üzerinden alınır; fiyatlara yasal vergiler (KDV) mağaza tarafından eklenir. Abonelikler, dönem sonundan en az 24 saat önce iptal edilmediği sürece her ay otomatik olarak yenilenir. Aboneliğinizi istediğiniz zaman Google Play &gt; Ödemeler ve Abonelikler menüsünden iptal edebilirsiniz; iptal, mevcut ödenmiş dönemin sonunda yürürlüğe girer ve o döneme ait ücret iade edilmez. İade talepleri Google Play'in iade politikalarına tabidir.</li>
-<li><strong>Ücretsiz deneme:</strong> Pro aboneliğe bağlı 7 günlük ücretsiz deneme, daha önce hiçbir Pivot aboneliğinden veya denemesinden yararlanmamış kullanıcılara bir defaya mahsus sunulur. Deneme süresi boyunca toplam 20 yapay zeka koç mesajı ve 5 soru çözdürme hakkı tanınır. Deneme, süre bitiminden en az 24 saat önce iptal edilmediği takdirde ücretli Pro aboneliğe dönüşür ve ilk dönem ücreti tahsil edilir.</li>
-<li><strong>Koşullarda değişiklik:</strong> DereceLab; abonelik fiyatlarını, aylık hak miktarlarını, özellik kapsamını ve işbu şartları değiştirme hakkını saklı tutar. Değişiklikler uygulama içi bildirim ve/veya bu sayfa üzerinden duyurulur; mevcut abonelerin ödenmiş dönemi boyunca geçerli hakları korunur ve değişiklikler en erken bir sonraki yenileme döneminde yürürlüğe girer. Fiyat artışlarında Google Play'in zorunlu bilgilendirme ve onay süreci ayrıca uygulanır. Değişikliğin yürürlüğe girmesinden sonra hizmeti kullanmaya devam etmeniz, güncel koşulları kabul ettiğiniz anlamına gelir.</li>
-<li><strong>Denetmen hesapları:</strong> Denetmen rolü ücretsizdir ve en fazla 3 öğrencinin takibini kapsar. Daha fazla öğrenci takibi, ileride sunulacak ücretli "Denetmen Plus" aboneliğine tabi olacaktır.</li>
+<li>İade talepleri Google Play'in iade politikalarına tabidir.</li>
+<li><strong>Ücretsiz deneme:</strong> Pro aboneliğe bağlı 7 günlük ücretsiz deneme, daha önce hiçbir Pivot aboneliğinden veya denemesinden yararlanmamış kullanıcılara bir defaya mahsus sunulur. Deneme süresi boyunca toplam 20 yapay zekâ koç mesajı ve 5 soru çözdürme hakkı tanınır. Deneme, süre bitiminden en az 24 saat önce iptal edilmediği takdirde ücretli Pro aboneliğe dönüşür ve ilk dönem ücreti tahsil edilir.</li>
+<li><strong>Koşullarda değişiklik:</strong> Pivot; abonelik fiyatlarını, aylık hak miktarlarını, özellik kapsamını ve işbu şartları değiştirme hakkını saklı tutar. Değişiklikler uygulama içi bildirim ve/veya bu sayfa üzerinden duyurulur; mevcut abonelerin ödenmiş dönemi boyunca geçerli hakları korunur ve değişiklikler en erken bir sonraki yenileme döneminde yürürlüğe girer. Fiyat artışlarında Google Play'in zorunlu bilgilendirme ve onay süreci ayrıca uygulanır.</li>
+<li><strong>Denetmen hesapları:</strong> Denetmen rolü ücretsizdir ve en fazla 3 öğrencinin takibini kapsar. Daha fazla öğrenci takibi, ileride sunulacak ücretli bir plana tabi olacaktır.</li>
 </ul>
 <hr />
 <h2>5. Kullanım Kuralları</h2>
@@ -261,64 +331,71 @@ Veri Sorumlusu: Mehmet Nurullah TEK</p>
 <ul>
 <li>Yasalara aykırı, zararlı, tehdit edici, taciz edici, hakaret içeren veya uygunsuz içerik paylaşmak</li>
 <li>Başka kullanıcıları rahatsız etmek veya zarar vermek</li>
-<li>Çalışma odalarında veya diğer kullanıcılarla etkileşimde uygunsuz davranışlarda bulunmak</li>
+<li>Çalışma odalarında, Etüt panosunda veya diğer kullanıcılarla etkileşimde uygunsuz davranışlarda bulunmak</li>
+<li>Telefon numarası, sosyal medya hesabı veya dış bağlantı paylaşarak kullanıcıları uygulama dışına yönlendirmek</li>
 <li>Uygulamanın güvenliğini tehlikeye atmak, sistemlere izinsiz erişmeye çalışmak</li>
 <li>Uygulamayı tersine mühendislik yapmak, kopyalamak veya izinsiz çoğaltmak</li>
 <li>Sahte hesap oluşturmak veya başkasının kimliğine bürünmek</li>
-<li>Yapay zeka özelliklerini kötüye kullanmak veya amacı dışında kullanmak</li>
+<li>Çalışma sürelerini veya puanları yapay yollarla artırmaya çalışmak</li>
+<li>Yapay zekâ özelliklerini kötüye kullanmak veya amacı dışında kullanmak</li>
 <li>Otomatik sistemlerle (bot vb.) uygulamaya erişmek</li>
 </ul>
 <p>Bu kurallara uymayan kullanıcıların hesapları uyarılmaksızın askıya alınabilir veya kapatılabilir.</p>
 <hr />
-<h2>6. Çalışma Odaları ve Kullanıcı Etkileşimi</h2>
-<p>Pivot, kullanıcıların birlikte çalışabileceği çalışma odaları sunar. Bu odalarda:</p>
+<h2>6. Çalışma Odaları, Sınıflar ve Etüt</h2>
 <ul>
-<li>Diğer kullanıcılara saygılı davranmanız beklenir.</li>
-<li>Uygunsuz davranış sergileyen kullanıcılar odadan çıkarılabilir veya hesapları kapatılabilir.</li>
-<li>Oda kurucuları, kendi odalarının yönetiminden sorumludur.</li>
+<li>Sınıflar herkese açık veya şifreli olarak kurulabilir. Sınıf kurucuları, kendi sınıflarının yönetiminden sorumludur.</li>
+<li>Uygunsuz davranış sergileyen kullanıcılar sınıftan çıkarılabilir, engellenebilir veya hesapları kapatılabilir.</li>
+<li>Etüt panosu, öğrencilerin birbirine soru sorduğu ortak bir alandır ve moderasyon ekibimiz tarafından denetlenir. İstediğiniz kullanıcıyı engelleyebilir, uygunsuz içerikleri şikâyet edebilirsiniz.</li>
+<li>Sınıflar, 3 gün boyunca hiç çalışma yapılmadığında otomatik olarak kapatılır.</li>
 </ul>
 <hr />
-<h2>7. Yapay Zeka İçerikleri</h2>
+<h2>7. Puan ve Lig Sistemi</h2>
+<p>Çalışma süreniz, soru tekrarlarınız ve tamamladığınız günlük görevler puana dönüşür. Puanlar aylık lig sıralamasında kullanılır ve her ayın başında lig sıfırlanır; geçmiş dönemlerin dereceleri profilinizde saklanır. Puan kazanımı sunucu tarafında doğrulanır; yapay yollarla puan artırma girişimleri tespit edilir ve hesap yaptırımına yol açabilir.</p>
+<hr />
+<h2>8. Yapay Zekâ İçerikleri</h2>
 <ul>
-<li>Yapay zeka koç ve soru çözme özellikleri bilgilendirme amaçlıdır.</li>
-<li>Yapay zeka tarafından üretilen yanıtlar her zaman doğru veya eksiksiz olmayabilir.</li>
+<li>Yapay zekâ koç ve soru çözme özellikleri bilgilendirme amaçlıdır.</li>
+<li>Yapay zekâ tarafından üretilen yanıtlar her zaman doğru veya eksiksiz olmayabilir.</li>
 <li>Önemli akademik kararlarınızda öğretmenlerinize ve resmi kaynaklara başvurmanızı öneririz.</li>
-<li>Yapay zeka yanıtlarının kullanımından doğacak sonuçlardan Pivot sorumlu tutulamaz.</li>
+<li>Yapay zekâ yanıtlarının kullanımından doğacak sonuçlardan Pivot sorumlu tutulamaz.</li>
 </ul>
 <hr />
-<h2>8. Fikri Mülkiyet</h2>
+<h2>9. Fikri Mülkiyet</h2>
 <p>Uygulamanın tasarımı, logosu, içeriği ve yazılımı Pivot'a aittir ve telif hakkı ile korunmaktadır. İzinsiz kullanılamaz, kopyalanamaz veya dağıtılamaz. Uygulamaya yüklediğiniz içerikler (soru fotoğrafları vb.) size aittir; ancak bu içerikleri uygulamada saklamamız ve işlememiz için bize izin vermiş olursunuz.</p>
 <hr />
-<h2>9. Sorumluluğun Sınırlandırılması</h2>
+<h2>10. Sorumluluğun Sınırlandırılması</h2>
 <ul>
 <li>Pivot, bir eğitim destek aracıdır ve sınav başarısını garanti etmez.</li>
 <li>Uygulama "olduğu gibi" sunulmaktadır. Hizmetin kesintisiz veya hatasız olacağını garanti etmeyiz.</li>
+<li>Soru Defteri fotoğrafları cihazınızda saklandığından, cihaz kaybı/sıfırlanması hâlinde bu fotoğrafların kaybından sorumlu değiliz.</li>
 <li>Teknik arızalar, veri kayıpları veya hizmet kesintilerinden kaynaklanabilecek dolaylı zararlardan, yürürlükteki yasaların izin verdiği ölçüde, sorumlu tutulamayız.</li>
 <li>Uygulamadaki üçüncü taraf hizmetlerin (Google, YouTube vb.) içeriğinden sorumlu değiliz.</li>
 </ul>
 <hr />
-<h2>10. Hesabın Askıya Alınması ve Kapatılması</h2>
+<h2>11. Hesabın Askıya Alınması ve Kapatılması</h2>
 <ul>
 <li>Bu Şartları ihlal etmeniz halinde hesabınız askıya alınabilir veya kapatılabilir.</li>
-<li>Hesabınızı istediğiniz zaman kendiniz silebilirsiniz.</li>
+<li>Hesabınızı istediğiniz zaman kendiniz silebilirsiniz; silme talebi 30 gün sonra kalıcı hâle gelir.</li>
 <li>Hesap kapatıldığında premium aboneliğinizle ilgili haklar Google Play politikalarına tabidir.</li>
 </ul>
 <hr />
-<h2>11. Değişiklikler</h2>
+<h2>12. Değişiklikler</h2>
 <p>Bu Şartlar zaman zaman güncellenebilir. Önemli değişiklikler uygulama üzerinden bildirilir. Değişikliklerden sonra uygulamayı kullanmaya devam etmeniz, güncel Şartları kabul ettiğiniz anlamına gelir.</p>
 <hr />
-<h2>12. Uygulanacak Hukuk</h2>
+<h2>13. Uygulanacak Hukuk</h2>
 <p>Bu Şartlar Türkiye Cumhuriyeti yasalarına tabidir. Şartlardan doğabilecek uyuşmazlıklarda Türkiye mahkemeleri ve icra daireleri yetkilidir.</p>
 <hr />
-<h2>13. İletişim</h2>
-<p>Kullanım Şartları ile ilgili sorularınız için:</p>
-<p><strong>E-posta:</strong> pivotdestek@gmail.com
+<h2>14. İletişim</h2>
+<p><strong>E-posta:</strong> pivotdestek@gmail.com<br />
 <strong>Sorumlu:</strong> Mehmet Nurullah TEK</p>
 <hr />
-<p><em>Bu Şartlar 20.07.2026 tarihinde yürürlüğe girmiştir. Uygulamayı kullanarak bu Şartları okuduğunuzu ve kabul ettiğinizi beyan edersiniz.</em></p></div>
+<p><em>Bu Şartlar 14.08.2026 tarihinde güncellenmiştir. Uygulamayı kullanarak bu Şartları okuduğunuzu ve kabul ettiğinizi beyan edersiniz.</em></p></div>
+
+    <!-- ══════════════════ KVKK ══════════════════ -->
     <div class="doc" id="kvkk"><h1>PIVOT KVKK AYDINLATMA METNİ</h1>
 <p><strong>6698 Sayılı Kişisel Verilerin Korunması Kanunu Kapsamında Aydınlatma Metni</strong></p>
-<p><strong>Son güncelleme:</strong> 20.07.2026</p>
+<p><strong>Son güncelleme:</strong> 14.08.2026</p>
 <p>Bu Aydınlatma Metni, 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, Pivot mobil uygulaması ("Uygulama", "Pivot") tarafından kişisel verilerinizin işlenmesine ilişkin olarak sizi bilgilendirmek amacıyla hazırlanmıştır.</p>
 <hr />
 <h2>1. Veri Sorumlusu</h2>
@@ -326,58 +403,59 @@ Veri Sorumlusu: Mehmet Nurullah TEK</p>
 <p><strong>İletişim:</strong> pivotdestek@gmail.com</p>
 <hr />
 <h2>2. İşlenen Kişisel Veriler</h2>
-<p>Pivot tarafından aşağıdaki kişisel verileriniz işlenmektedir:</p>
 <p><strong>Kimlik ve İletişim Verileri:</strong> Ad, soyad, e-posta adresi, doğum tarihi, cinsiyet</p>
-<p><strong>Eğitim ve Profil Verileri:</strong> Sınıf düzeyi, sınav türü (LGS/YKS), hedef okul/bölüm, yaşadığınız şehir</p>
-<p><strong>Kullanım Verileri:</strong> Çalışma süreleri, kronometre kayıtları, soru defteri kayıtları, deneme sonuçları, çalışma programları, yapay zeka koç sohbet geçmişi, yüklediğiniz soru fotoğrafları</p>
+<p><strong>Eğitim ve Profil Verileri:</strong> Sınav türü (LGS/YKS), alan bilgisi, hedef okul/bölüm, yaşadığınız şehir, kendinizi tanıttığınız kısa metin</p>
+<p><strong>Kullanım Verileri:</strong> Çalışma süreleri, kronometre kayıtları, soru defteri kayıtları, deneme sonuçları, çalışma programları, yapay zekâ koç sohbet geçmişi, Etüt panosu mesajları ve fotoğrafları</p>
 <p><strong>İşlem Güvenliği Verileri:</strong> Uygulama içi etkinlik kayıtları, cihaz bildirim kimliği</p>
+<p>Soru Defteri fotoğrafları cihazınızın yerel depolama alanında saklanır ve tarafımızca işlenmez.</p>
 <hr />
 <h2>3. Kişisel Verilerin İşlenme Amaçları</h2>
-<p>Kişisel verileriniz aşağıdaki amaçlarla işlenmektedir:</p>
 <ul>
 <li>Üyelik hesabınızın oluşturulması ve yönetilmesi</li>
 <li>Eğitim ve çalışma takibi hizmetlerinin sunulması</li>
-<li>Kişiselleştirilmiş çalışma deneyimi sağlanması (yapay zeka koç, program, analiz)</li>
+<li>Kişiselleştirilmiş çalışma deneyimi sağlanması (yapay zekâ koç, program, analiz)</li>
 <li>Çalışma istatistiklerinizin ve gelişiminizin sunulması</li>
-<li>Çalışma odaları ve lig gibi sosyal özelliklerin sağlanması</li>
+<li>Çalışma odaları, Etüt ve lig gibi sosyal özelliklerin sağlanması</li>
+<li>İçerik güvenliğinin sağlanması ve kötüye kullanımın önlenmesi</li>
 <li>Uygulamanın geliştirilmesi ve teknik sorunların giderilmesi</li>
 <li>Bildirim gönderilmesi (onayınız dahilinde)</li>
 <li>Yasal yükümlülüklerin yerine getirilmesi</li>
 </ul>
 <hr />
 <h2>4. Kişisel Verilerin İşlenmesinin Hukuki Sebepleri</h2>
-<p>Kişisel verileriniz, KVKK'nın 5. maddesinde belirtilen aşağıdaki hukuki sebeplere dayanılarak işlenmektedir:</p>
 <ul>
 <li><strong>Bir sözleşmenin kurulması veya ifası için gerekli olması</strong> (üyelik sözleşmesi ve hizmetin sunulması)</li>
 <li><strong>Açık rızanızın bulunması</strong> (isteğe bağlı veriler ve bildirimler için)</li>
-<li><strong>Veri sorumlusunun meşru menfaatleri</strong> (hizmet kalitesinin artırılması)</li>
+<li><strong>Veri sorumlusunun meşru menfaatleri</strong> (hizmet kalitesinin artırılması, içerik güvenliği)</li>
 <li><strong>Hukuki yükümlülüklerin yerine getirilmesi</strong></li>
 </ul>
 <hr />
 <h2>5. Kişisel Verilerin Aktarılması</h2>
-<p>Kişisel verileriniz, hizmetin sunulabilmesi için aşağıdaki üçüncü taraf hizmet sağlayıcılarına aktarılabilir:</p>
 <ul>
-<li><strong>Google LLC</strong> (Firebase, Gemini, YouTube hizmetleri): Kimlik doğrulama, veritabanı, yapay zeka, bildirim ve video içeriği</li>
-<li><strong>Cloudinary</strong>: Yüklediğiniz soru fotoğraflarının saklanması</li>
+<li><strong>Google LLC</strong> (Firebase, Gemini, Cloud Vision, YouTube hizmetleri): Kimlik doğrulama, veritabanı, dosya depolama, yapay zekâ, içerik denetimi, bildirim ve video içeriği</li>
 <li><strong>RevenueCat, Inc.</strong> ve <strong>Google Play</strong>: Abonelik durumunun doğrulanması ve ödeme işlemlerinin yürütülmesi</li>
 </ul>
 <p>Bu hizmet sağlayıcıların sunucuları yurt dışında bulunabilir. Verileriniz, KVKK'nın yurt dışına veri aktarımına ilişkin hükümleri çerçevesinde ve yalnızca ilgili hizmetin sunulması için gerekli olduğu ölçüde aktarılır. Verileriniz pazarlama amacıyla üçüncü taraflara satılmaz veya devredilmez.</p>
 <p>Abonelik durumunun doğrulanması ve yönetilmesi amacıyla sınırlı satın alma verileri (anonim kullanıcı tanımlayıcısı, abonelik durumu ve tarihi), sunucuları yurt dışında bulunan RevenueCat, Inc.'e; ödeme işlemlerinin yürütülmesi amacıyla Google Play'e aktarılmaktadır. Aktarımlar, KVKK'nın 9. maddesi kapsamında açık rızanıza dayanılarak gerçekleştirilir.</p>
 <hr />
-<h2>6. 18 Yaşından Küçük Kullanıcılar</h2>
-<p>Pivot, ağırlıklı olarak 18 yaşından küçük öğrencilere yönelik bir eğitim uygulamasıdır. Bu kapsamda:</p>
+<h2>6. Denetmen Sistemi Kapsamında Veri Paylaşımı</h2>
+<p>Bir veli veya öğretmeni denetmen olarak <strong>açıkça onaylamanız</strong> hâlinde, aşağıdaki veriler o kişiyle paylaşılır: kronometre kayıtlarınız, ders bazlı çalışma dağılımınız, programlarınızdaki tamamlanma oranı, deneme sonuçlarınız ve aylık özet rapor.</p>
+<p>Programlarınızın içeriği, soru defteriniz, sınıf bilgileriniz, Etüt mesajlarınız ve yapay zekâ koç sohbetleriniz denetmenle <strong>paylaşılmaz</strong>. Onayınızı istediğiniz an geri çekebilirsiniz.</p>
+<hr />
+<h2>7. 18 Yaşından Küçük Kullanıcılar</h2>
 <ul>
 <li>13 yaşından küçük çocuklar uygulamaya kayıt olamaz.</li>
+<li>Etüt panosu yalnızca 15 yaşını doldurmuş YKS öğrencilerine açıktır.</li>
 <li>18 yaşından küçük kullanıcıların, uygulamayı ebeveyn veya yasal velilerinin onayıyla kullanması beklenir.</li>
 <li>Çocuklardan yalnızca hizmetin sunulması için gerekli asgari veri toplanır.</li>
 <li>Çocuklara yönelik davranışsal reklam yapılmaz.</li>
 </ul>
 <p>Ebeveyn veya veliler, çocuklarına ait kişisel verilerin işlenmesine ilişkin haklarını pivotdestek@gmail.com adresinden kullanabilir.</p>
 <hr />
-<h2>7. Kişisel Verilerin Saklanma Süresi</h2>
-<p>Kişisel verileriniz, üyeliğiniz aktif olduğu sürece ve ilgili mevzuatta öngörülen süreler boyunca saklanır. Hesabınızı sildiğinizde, yasal saklama yükümlülükleri saklı kalmak kaydıyla, verileriniz makul süre içinde silinir, yok edilir veya anonim hale getirilir.</p>
+<h2>8. Kişisel Verilerin Saklanma Süresi</h2>
+<p>Kişisel verileriniz, üyeliğiniz aktif olduğu sürece ve ilgili mevzuatta öngörülen süreler boyunca saklanır. Hesabınızı sildiğinizde 30 günlük bekleme süresi başlar; süre dolduğunda, yasal saklama yükümlülükleri saklı kalmak kaydıyla, verileriniz silinir, yok edilir veya anonim hale getirilir.</p>
 <hr />
-<h2>8. KVKK Kapsamındaki Haklarınız</h2>
+<h2>9. KVKK Kapsamındaki Haklarınız</h2>
 <p>KVKK'nın 11. maddesi uyarınca aşağıdaki haklara sahipsiniz:</p>
 <ul>
 <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
@@ -391,20 +469,21 @@ Veri Sorumlusu: Mehmet Nurullah TEK</p>
 <li>Kanuna aykırı işleme sebebiyle zarara uğramanız halinde zararın giderilmesini talep etme</li>
 </ul>
 <hr />
-<h2>9. Haklarınızı Kullanma Yöntemi</h2>
+<h2>10. Haklarınızı Kullanma Yöntemi</h2>
 <p>Yukarıda belirtilen haklarınızı kullanmak için taleplerinizi <strong>pivotdestek@gmail.com</strong> adresine iletebilirsiniz. Başvurunuz, KVKK'da öngörülen süre içinde (en geç 30 gün) sonuçlandırılacaktır. Ayrıca uygulama içinden hesabınızı ve verilerinizi doğrudan silebilirsiniz.</p>
 <hr />
-<h2>10. Değişiklikler</h2>
+<h2>11. Değişiklikler</h2>
 <p>Bu Aydınlatma Metni, mevzuat değişiklikleri veya hizmetlerimizdeki güncellemeler doğrultusunda revize edilebilir. Güncel metne her zaman uygulama içinden erişebilirsiniz.</p>
 <hr />
-<h2>11. İletişim</h2>
-<p>KVKK kapsamındaki talepleriniz ve sorularınız için:</p>
-<p><strong>E-posta:</strong> pivotdestek@gmail.com
+<h2>12. İletişim</h2>
+<p><strong>E-posta:</strong> pivotdestek@gmail.com<br />
 <strong>Veri Sorumlusu:</strong> Mehmet Nurullah TEK</p>
 <hr />
-<p><em>Bu Aydınlatma Metni 20.07.2026 tarihinde yürürlüğe girmiştir.</em></p></div>
+<p><em>Bu Aydınlatma Metni 14.08.2026 tarihinde güncellenmiştir.</em></p></div>
+
+    <!-- ══════════════════ HESAP SİLME ══════════════════ -->
     <div class="doc" id="hesapsil"><h1>PİVOT HESAP SİLME</h1>
-<p><strong>Son güncelleme:</strong> 20.07.2026</p>
+<p><strong>Son güncelleme:</strong> 14.08.2026</p>
 <p>Pivot uygulaması hesabınızı ve hesabınızla ilişkili verileri silme talebinde bulunabilirsiniz. Aşağıdaki iki yöntemden birini kullanabilirsiniz.</p>
 <hr />
 <h2>1. Uygulama İçinden Silme (Önerilen)</h2>
@@ -414,7 +493,7 @@ Veri Sorumlusu: Mehmet Nurullah TEK</p>
 <li><strong>"Hesabı Sil"</strong> seçeneğine dokunun</li>
 <li>İşlemi onaylayın</li>
 </ul>
-<p>Hesabınız ve ilişkili verileriniz bu işlemle birlikte silinme sürecine alınır.</p>
+<p><strong>30 günlük bekleme süresi:</strong> Silme talebiniz hemen işleme alınır ancak verileriniz 30 gün boyunca saklanır. Bu süre içinde hesabınıza tekrar giriş yaparsanız silme talebi otomatik olarak iptal edilir ve verileriniz korunur. 30 gün dolduğunda silme kalıcı hâle gelir ve geri alınamaz.</p>
 <hr />
 <h2>2. Uygulama Dışından Silme Talebi</h2>
 <p>Uygulamaya erişiminiz yoksa, kayıtlı e-posta adresinizi belirterek <strong>pivotdestek@gmail.com</strong> adresine "Hesap Silme Talebi" konulu bir e-posta gönderin. Talebiniz en geç 30 gün içinde işleme alınır ve size sonuç bildirilir.</p>
@@ -422,17 +501,22 @@ Veri Sorumlusu: Mehmet Nurullah TEK</p>
 <h2>3. Silinen Veriler</h2>
 <p>Hesabınız silindiğinde aşağıdaki veriler kalıcı olarak silinir:</p>
 <ul>
-<li>Ad, soyad, e-posta adresi, doğum tarihi, cinsiyet</li>
+<li>Ad, soyad, e-posta adresi, doğum tarihi, cinsiyet ve profil bilgileri</li>
 <li>Çalışma süreleri ve kronometre kayıtları</li>
-<li>Yapay zeka koç sohbet geçmişi</li>
-<li>Soru defteri kayıtları ve soru fotoğrafları</li>
+<li>Yapay zekâ koç sohbet geçmişi</li>
+<li>Soru defteri kayıtları</li>
 <li>Deneme sınavı sonuçları ve analizleri</li>
-<li>Çalışma programları ve odası/sınıf etkinlikleri</li>
+<li>Çalışma programlarınız</li>
+<li>Sınıf üyelikleriniz ve bekleyen sınıf başvurularınız</li>
+<li>Denetmen bağlantılarınız</li>
+<li>Herkese açık profiliniz ve lig kayıtlarınız</li>
 <li>Cihaz bildirim kimliği</li>
 </ul>
+<p><strong>Soru Defteri fotoğrafları</strong> zaten yalnızca cihazınızda saklandığı için, uygulamayı sildiğinizde birlikte silinir.</p>
 <hr />
 <h2>4. Saklanabilecek Veriler</h2>
 <p>Yasal yükümlülüklerimiz gereği bazı işlem kayıtları (örneğin Google Play üzerinden yapılmış ödeme kayıtları) ilgili mevzuatın öngördüğü süre boyunca saklanabilir. Bu veriler yalnızca yasal zorunluluk halinde tutulur ve başka bir amaçla kullanılmaz.</p>
+<p>Etüt panosuna gönderdiğiniz mesajlar, moderasyon ve içerik güvenliği amacıyla sınırlı bir süre daha sistemde kalabilir; ancak bu içerikler hesabınızla ilişkilendirilemez hâle getirilir.</p>
 <hr />
 <h2>5. İletişim</h2>
 <p>Hesap silme talebinizle ilgili sorularınız için: <strong>pivotdestek@gmail.com</strong></p>
