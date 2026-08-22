@@ -1,1 +1,0 @@
-# pivotdestek.github.io
