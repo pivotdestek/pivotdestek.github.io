@@ -161,6 +161,33 @@
   .kitle li { position: relative; padding-left: 26px; font-size: 16px; line-height: 1.5; color: var(--metin-2); }
   .kitle li::before { content: ""; position: absolute; left: 2px; top: 9px; width: 12px; height: 12px; border-radius: 50%; background: var(--amber); }
 
+  /* ── Kimin işine yarar (SSS) ───────────────────────────── */
+  .sss { margin-top: 64px; }
+  .sss-baslik { font-size: clamp(24px, 3vw, 32px); line-height: 1.15; font-weight: 800; letter-spacing: -0.01em; color: var(--lacivert); }
+  .sss-ara { margin-top: 8px; color: var(--metin-2); font-size: 17px; max-width: 60ch; }
+  .sss-liste { margin-top: 24px; display: flex; flex-direction: column; gap: 12px; max-width: 860px; }
+  .sss details { background: var(--kart); border: 1px solid var(--cizgi); border-radius: 18px; }
+  .sss details[open] { border-color: var(--amber); }
+  .sss summary {
+    list-style: none; cursor: pointer; padding: 20px 24px; font-size: 18px; font-weight: 700; color: var(--lacivert);
+    display: flex; align-items: center; justify-content: space-between; gap: 16px; border-radius: 18px;
+  }
+  .sss summary::-webkit-details-marker { display: none; }
+  .sss summary::after { content: "+"; font-size: 28px; font-weight: 500; line-height: 1; color: var(--amber-koyu); flex-shrink: 0; }
+  .sss details[open] summary::after { content: "\2212"; }
+  .sss .cevap { padding: 0 24px 24px; color: var(--metin-2); font-size: 16px; line-height: 1.6; }
+  .sss .cevap > p { margin-bottom: 14px; color: var(--metin); }
+  .sss .cevap ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .sss .cevap li { position: relative; padding-left: 24px; }
+  .sss .cevap li::before { content: ""; position: absolute; left: 2px; top: 9px; width: 10px; height: 10px; border-radius: 50%; background: var(--amber); }
+  .sss .cevap strong { color: var(--metin); }
+  .sss .cevap a { color: var(--lacivert-acik); font-weight: 600; }
+  @media (max-width: 760px) {
+    .sss summary { padding: 18px; font-size: 17px; }
+    .sss .cevap { padding: 0 18px 20px; }
+  }
+
+
   /* ── Sorun → çözüm ─────────────────────────────────────── */
   .takip { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: start; }
   .sorunlar { border-top: 2px solid var(--cizgi); }
@@ -389,7 +416,7 @@
             </div>
             <p class="soz">Sormadan gör.</p>
             <ul>
-              <li>Bugünkü, haftalık ve aylık çalışma süresi tek ekranda.</li>
+              <li>Bugünkü ve haftalık çalışma süresi tek ekranda; her ay özet bildirimi gelir.</li>
               <li>Öğrenci 3 gün çalışmazsa bildirim alırsın.</li>
               <li>Günde bir hazır destek notu gönderebilirsin.</li>
               <li>Davet kodunu çocuğuna ver, o girip onaylasın. Takip ücretsiz; mesajları ve koç sohbetleri sana görünmez.</li>
@@ -409,6 +436,71 @@
               <li>Kısa not bırak; öğrenci hazır cevapla yanıtlar, velisi de görür.</li>
             </ul>
           </article>
+        </div>
+
+        <div class="sss" id="kimin-isine-yarar">
+          <h3 class="sss-baslik">Kimin işine yarar?</h3>
+          <p class="sss-ara">Öğrenciden okula, Dirayz'ı kimin nasıl kullandığı.</p>
+          <div class="sss-liste">
+
+            <details>
+              <summary>Hangi öğrencilerin işine yarar?</summary>
+              <div class="cevap">
+                <p>YKS, LGS, KPSS, MSÜ, DGS ve ALES'e hazırlanan her öğrencinin. Lisede okuyor, mezun ya da açıktan okuyor olman fark etmez; uygulama herkese aynı şekilde çalışır.</p>
+                <ul>
+                  <li><strong>Sınavına göre ayar:</strong> YKS'de alanını (Sayısal, Eşit Ağırlık, Sözel, Dil ya da yalnız TYT), KPSS'de öğrenim düzeyini (lisans, ön lisans, ortaöğretim), ALES'te oturumunu seçersin.</li>
+                  <li><strong>Hazır program:</strong> YKS ve LGS'de "Hızlı başla" ile sınavını, çalışacağın günleri ve haftalık süreni seçersin; dersler, tekrar testleri ve denemeler tek programda hazır. Diğer sınavlarda programı kendi kaynaklarınla kurarsın.</li>
+                  <li><strong>Her sınavda:</strong> kronometre, aylık lig, çalışma sınıfları, 1-3-7 tekrarlı soru defteri, deneme kaydı ve analizi, yapay zekâ koç ve fotoğraftan soru çözümü.</li>
+                  <li><strong>Deneme analizi:</strong> YKS'de tahmini puan ve sıralama, LGS'de tahmini yüzdelik dilim; KPSS, MSÜ, DGS ve ALES'te netin hesaplanır. Bu sınavlarda puan, sınavdan sonra bütün adaylara göre belirlendiği için tahmin yapılmaz.</li>
+                  <li><strong>Etüt:</strong> öğrencilerin birbirine soru sorduğu pano; 15 yaş ve üstü öğrencilere açık, LGS'de kapalı.</li>
+                  <li><strong>Başlamak:</strong> 13 yaş ve üstü herkes kayıt olabilir. Hesap açmadan 7 gün deneyebilirsin; lig, sınıflar, Etüt, yapay zekâ ve veli ya da öğretmen bağlantısı için hesap gerekir.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details>
+              <summary>Velilere ne kazandırır?</summary>
+              <div class="cevap">
+                <p>Çocuğuna sormadan nasıl çalıştığını görürsün; o da neyin paylaşıldığını bilerek onay verir.</p>
+                <ul>
+                  <li><strong>Gördüklerin:</strong> bugünkü ve haftalık çalışma süresi, şu an çalışıp çalışmadığı, kaç gündür çalışmadığı, en çok çalıştığı dersler, kronometre kayıtları, puanı ve lig sırası, paylaştığı programlardaki ilerlemesi, deneme netlerinin gidişi ve öğretmeninin yazdığı notlar.</li>
+                  <li><strong>Bildirimler:</strong> çocuğun 3 gün çalışmazsa haber alırsın, sonra 7 günde bir hatırlatma gelir. Her ayın başında çalışma süresi, aktif gün sayısı ve program ilerlemesiyle aylık özet bildirimi gelir. Raporlar e-postayla değil, uygulama bildirimiyle gelir.</li>
+                  <li><strong>Destek:</strong> günde bir kez hazır listeden kısa bir destek tepkisi gönderebilirsin (aferin, yanındayım gibi). Serbest mesaj yazılmaz.</li>
+                  <li><strong>Görmediklerin:</strong> yapay zekâ sohbetleri, soru defteri, Etüt mesajları, hangi sınıfta olduğu ve paylaşmadığı programlarının içeriği.</li>
+                  <li><strong>Bağlantı:</strong> uygulamadaki 6 karakterlik kodunu çocuğuna verirsin; çocuğun kodu girer, neyi göreceğini görür ve onaylar. Bağlantıyı istediği an kaldırabilir.</li>
+                  <li><strong>Ücret:</strong> veli hesabı ücretsiz, 10 öğrenciye kadar; çocuğunun abonelik alması gerekmez.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details>
+              <summary>Öğretmenlere, koçlara ve özel öğretmenlere ne sunar?</summary>
+              <div class="cevap">
+                <p>Okul öğretmeni, koç ve özel öğretmen aynı "Öğretmen / Koç" hesabını kullanır; 60 öğrenciye kadar ücretsiz.</p>
+                <ul>
+                  <li><strong>Öğrenci ekleme:</strong> kişisel kodunu ya da bir grubun kodunu verirsin; öğrenci kodu girip onaylar. En çok 30 grup kurabilir, her grubun boyutunu belirleyebilirsin.</li>
+                  <li><strong>Grup tablosu:</strong> bugün kim çalıştı, kim şu an çalışıyor, kim 3 gündür ya da daha uzun süredir sessiz; her öğrencide haftalık süre, program ilerlemesi ve son deneme neti; açınca 7 günlük grafik ve ders dağılımı.</li>
+                  <li><strong>Program atama:</strong> kitap, konu, test ya da YouTube oynatma listesiyle program kurup bir ya da birçok öğrenciye (en çok 300) gönderirsin. Değişiklik hepsine uygulanır, yapılmış görevler korunur; her öğrencinin tamamlanma yüzdesini görürsün.</li>
+                  <li><strong>Not ve destek:</strong> öğrenci başına günde en fazla 3 kısa not (200 karakter) yazarsın; öğrenci hazır cevapla yanıtlar, velisi de görür. Hazır destek tepkilerini öğrencilerine toplu da gönderebilirsin.</li>
+                  <li><strong>Deneme takibi:</strong> öğrencinin deneme listesi ve toplam netinin gidişi (son 8 deneme).</li>
+                  <li><strong>Görmediklerin:</strong> yapay zekâ sohbetleri, soru defteri, Etüt mesajları ve öğrencinin kendi kurduğu programların içeriği. Senin atadığın programı ise ayrıntısıyla görürsün.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details>
+              <summary>Okul rehberlik servisleri ve kurumlar nasıl kullanır?</summary>
+              <div class="cevap">
+                <p>Ayrı bir kurum paneli yok; rehber öğretmen ya da her öğretmen kendi "Öğretmen / Koç" hesabıyla kullanır.</p>
+                <ul>
+                  <li><strong>Nasıl:</strong> grup oluşturup grup kodunu öğrencilere verirsin; öğrenciler onaylayarak katılır. Sonra grup tablosundan takip eder, program atar, not bırakırsın.</li>
+                  <li><strong>Kapasite:</strong> bir öğretmen 60 öğrenciye kadar ücretsiz takip eder; aynı öğrenciyi birden çok öğretmen ayrı ayrı takip edebilir. Daha fazla öğrenci için kurum lisansı: <a href="mailto:destek@dirayz.com">destek@dirayz.com</a>.</li>
+                  <li><strong>Onay öğrencide:</strong> okul adına toplu hesap açılmaz; her öğrenci bağlantıyı kendisi onaylar ve istediği an kaldırabilir.</li>
+                </ul>
+              </div>
+            </details>
+
+          </div>
         </div>
       </div>
     </div>
@@ -688,6 +780,7 @@
     <ul>
       <li>Cihaz bildirim kimliği (bildirim gönderebilmek için)</li>
       <li>Uygulama içi etkinlik ve oturum bilgileri</li>
+      <li>Uygulama doğrulama bilgisi (Firebase App Check): uygulamanın değiştirilmemiş bir sürüm olduğunu doğrulamak için</li>
     </ul>
 
     <p>Dirayz; T.C. kimlik numarası, adres, telefon numarası, banka veya kart bilgisi gibi verileri <strong>toplamaz</strong>. Ödemeler tamamen uygulama mağazasının (Android'de <strong>Google Play</strong>, iPhone/iPad'de <strong>Apple App Store</strong>) altyapısı üzerinden yürütülür ve kart bilgilerinize erişimimiz yoktur.</p>
@@ -721,15 +814,16 @@
     <hr />
     <h2>4. Üçüncü taraf hizmetler</h2>
     <ul>
-      <li><strong>Google Firebase</strong> (Google LLC): Kimlik doğrulama, veritabanı, dosya depolama (Soru Defteri ve Etüt fotoğrafları) ve bildirim altyapısı</li>
+      <li><strong>Google Firebase</strong> (Google LLC): Kimlik doğrulama, veritabanı, dosya depolama (Soru Defteri ve Etüt fotoğrafları)</li>
       <li><strong>Google ile giriş</strong> (Google LLC) ve <strong>Apple ile giriş</strong> (Apple Inc.): Bu yöntemlerle giriş yapmayı seçerseniz kimliğinizin doğrulanması</li>
       <li><strong>OpenAI</strong> (OpenAI, L.L.C., ABD): Yapay zekâ koç ve soru çözme özelliği; programa eklenen YouTube video başlıklarının konulara eşleştirilmesi</li>
       <li><strong>Google Cloud Vision</strong> (Google LLC): Etüt panosuna gönderilen fotoğrafların otomatik içerik denetimi</li>
       <li><strong>YouTube API Hizmetleri</strong> (Google LLC): Programa eklediğiniz herkese açık oynatma listelerindeki video başlıklarının ve sürelerinin alınması</li>
-      <li><strong>Sentry</strong> (Functional Software, Inc., ABD): Uygulama ve sunucu hatalarının (çökme raporları) toplanması</li>
+      <li><strong>Firebase App Check</strong> (Google LLC), <strong>Google Play Integrity</strong> (Android) ve <strong>Apple App Attest</strong> (iPhone/iPad): Uygulamanın ve cihazın gerçek ve değiştirilmemiş olduğunun doğrulanması</li>
+      <li><strong>Sentry</strong> (Functional Software, Inc., ABD; veriler AB'de, Almanya'da tutulur): Uygulama hatalarının (çökme raporları) toplanması</li>
       <li><strong>Expo</strong> (650 Industries, Inc., ABD): Anlık bildirimlerin cihazınıza iletilmesi</li>
       <li><strong>Railway</strong> (Railway Corp., ABD): Dirayz sunucusunun barındırılması</li>
-      <li><strong>Google Play</strong> (Google LLC), <strong>Apple App Store</strong> (Apple Inc.) ve <strong>RevenueCat, Inc.</strong>: Abonelik ve kredi satın alımlarının işlenmesi ve doğrulanması</li>
+      <li><strong>Google Play</strong> (Google LLC), <strong>Apple App Store</strong> (Apple Inc.) ve <strong>RevenueCat, Inc.</strong>: Ödemeler açıldığında abonelik ve kredi satın alımlarının işlenmesi ve doğrulanması (şu anda uygulamada satın alma yoktur)</li>
     </ul>
     <p>Bu hizmetlere yalnızca ilgili özelliğin çalışması için gerekli veriler aktarılır.</p>
     <p><strong>YouTube API Hizmetleri.</strong> Dirayz, programa eklediğiniz oynatma listelerinin video bilgilerini almak için YouTube API Hizmetlerini kullanır. Bu özelliği kullanarak <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Hizmet Şartları</a>'nı kabul etmiş olursunuz; Google'ın verileri nasıl işlediği <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gizlilik Politikası</a>'nda açıklanır. Dirayz YouTube hesabınıza erişmez; yalnızca herkese açık listelerin bilgilerini okur, videolar YouTube uygulamasında ya da tarayıcıda açılır.</p>
@@ -740,13 +834,14 @@
     <ul>
       <li><strong>Google Firebase</strong> — hesap bilgileriniz, çalışma verileriniz, Soru Defteri ve Etüt fotoğraflarınız. Hizmetin temelini oluşturur.</li>
       <li><strong>Google ile giriş / Apple ile giriş</strong> — yalnızca bu yöntemle giriş yaparsanız: e-posta adresiniz ve oturum kimliğiniz. Şifrenizi biz görmeyiz.</li>
-      <li><strong>OpenAI (ABD)</strong> — yalnızca yapay zekâ koç ve soru çözdürme özelliklerini kullandığınızda ve uygulama içinde bunun için ayrıca açık izin verdikten sonra: koça yazdığınız mesajlar, sohbet geçmişi ve özeti; koçun size uygun yanıt verebilmesi için adınız, sınav türünüz ve alanınız, sınıf/not açıklamanız, şehriniz, hedef okul ve bölümünüz, koça verdiğiniz ad ve kişilik tarifi; çalışma özetiniz (bugünkü ve haftalık çalışma süreniz, program ilerlemeniz, deneme netleriniz); çözdürdüğünüz sorunun fotoğrafı ya da metni ve ders adı. Yalnızca yanıt üretilirken iletilir ve model eğitiminde kullanılmaz; OpenAI yalnızca kötüye kullanımı denetlemek için en fazla 30 gün tutabilir. 18 yaşından küçük kullanıcılar bu izni yalnızca veli/vasi onayını uygulama içinde beyan ederek verebilir. Ayrıca programa YouTube oynatma listesi eklediğinizde listedeki herkese açık video başlıkları, konulara eşleştirilmesi için OpenAI'a gönderilir; bu gönderimde sizinle ilgili hiçbir bilgi (ad, hesap, çalışma verisi) yer almaz. Hesapsız (misafir) kullanımda bu eşleştirme yapay zekâ kullanılmadan yapılır.</li>
+      <li><strong>OpenAI (ABD)</strong> — yalnızca yapay zekâ koç ve soru çözdürme özelliklerini kullandığınızda ve uygulama içinde bunun için ayrıca açık izin verdikten sonra: koça yazdığınız mesajlar, sohbet geçmişi ve özeti; koçun size uygun yanıt verebilmesi için adınız, sınav türünüz ve alanınız, sınıf/not açıklamanız, şehriniz, hedef okul ve bölümünüz, koça verdiğiniz ad ve kişilik tarifi; çalışma özetiniz (bugünkü ve haftalık çalışma süreniz, program ilerlemeniz, deneme netleriniz); sınavınızla ilgili notunuz; çözdürdüğünüz sorunun fotoğrafı ya da metni ve ders adı. Koç yanıt veremediğinde mesajınız ayrıca kendine zarar riski açısından OpenAI'ın içerik denetimi hizmetinden geçirilir. Yalnızca yanıt üretilirken iletilir ve model eğitiminde kullanılmaz; OpenAI yalnızca kötüye kullanımı denetlemek için en fazla 30 gün tutabilir. 18 yaşından küçük kullanıcılar bu izni yalnızca veli/vasi onayını uygulama içinde beyan ederek verebilir. Ayrıca programa YouTube oynatma listesi eklediğinizde listedeki herkese açık video başlıkları, konulara eşleştirilmesi için OpenAI'a gönderilir; bu gönderimde sizinle ilgili hiçbir bilgi (ad, hesap, çalışma verisi) yer almaz. Hesapsız (misafir) kullanımda bu eşleştirme yapay zekâ kullanılmadan yapılır.</li>
       <li><strong>YouTube API Hizmetleri</strong> — yalnızca programa oynatma listesi eklediğinizde listenin kimliği; video başlıklarını ve sürelerini almak için. Hakkınızda bilgi gönderilmez.</li>
       <li><strong>Google Cloud Vision</strong> — yalnızca Etüt panosuna gönderilen fotoğraflar, otomatik içerik denetimi için.</li>
-      <li><strong>Sentry</strong> — yalnızca uygulama bir hatayla karşılaştığında: cihaz modeli, işletim sistemi ve uygulama sürümü ile hatanın teknik ayrıntıları. Hatayı bulup düzeltmek için kullanılır.</li>
+      <li><strong>Firebase App Check / Google Play Integrity / Apple App Attest</strong> — uygulamanın ve cihazın doğrulanması için gereken teknik bilgi; kötüye kullanımı önlemek için. Hesap ve çalışma verileriniz gönderilmez.</li>
+      <li><strong>Sentry</strong> (veriler AB'de, Almanya'da tutulur) — yalnızca uygulama bir hatayla karşılaştığında: cihaz modeli, işletim sistemi ve uygulama sürümü ile hatanın teknik ayrıntıları. Hatayı bulup düzeltmek için kullanılır.</li>
       <li><strong>Expo</strong> — bildirim gönderilebilmesi için cihazınıza ait anonim bildirim adresi (push token).</li>
       <li><strong>Railway</strong> — Dirayz sunucusu bu altyapıda çalışır; uygulamanın sunucuya gönderdiği istekler burada işlenir.</li>
-      <li><strong>Google Play / Apple App Store / RevenueCat</strong> — anonim kullanıcı tanımlayıcısı ve satın alma durumu bilgisi. Ödeme aracı bilgileriniz (kart numarası vb.) ne tarafımızca ne de RevenueCat tarafından görülür; ödemeler tamamen ilgili mağaza tarafından işlenir. Ayrıntı: <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></li>
+      <li><strong>Google Play / Apple App Store / RevenueCat</strong> — ödemeler açıldığında: anonim kullanıcı tanımlayıcısı ve satın alma durumu bilgisi. Ödeme aracı bilgileriniz (kart numarası vb.) ne tarafımızca ne de RevenueCat tarafından görülür; ödemeler tamamen ilgili mağaza tarafından işlenir. Ayrıntı: <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></li>
     </ul>
     <p>Uygulamaya kayıt olarak ve kullanmaya devam ederek, kişisel verilerinizin yukarıda belirtilen amaçlarla ve sınırlı kapsamda yurt dışına aktarılmasına <strong>KVKK'nın 9. maddesi uyarınca açık rıza</strong> vermiş olursunuz. Bu rızanızı geri çekmek isterseniz hesabınızı silebilir veya destek@dirayz.com adresinden bize ulaşabilirsiniz; ancak rızanın geri çekilmesi hâlinde hizmeti sunmamız teknik olarak mümkün olmayacaktır.</p>
 
@@ -759,7 +854,8 @@
       <li>Kronometre kayıtlarınız ve ders bazlı çalışma dağılımınız</li>
       <li>Denetmenle paylaşmayı seçtiğiniz programlardaki ilerlemeniz (program adı ve tamamlanma oranı). Kendi oluşturduğunuz programlar varsayılan olarak <strong>paylaşılmaz</strong>; program menüsünden açabilirsiniz. Öğretmen/koç olarak bağlı denetmenin size atadığı programı ve ilerlemenizi o denetmen görür.</li>
       <li>Deneme sınavı sonuçlarınız ve analizleriniz</li>
-      <li>Haftalık ve aylık özet raporlar</li>
+      <li>Haftalık özet (haftalık çalışma süresi, çalışılan gün sayısı, en çok çalışılan dersler, program ilerlemesi) ve her ay gönderilen özet bildirimi</li>
+      <li>Toplam puanınız ve lig sıralamanız (bunlar herkese açık profilinizde de görünür)</li>
       <li>Öğretmenlerinizin size yazdığı notlar ve verdiğiniz hazır cevaplar</li>
     </ul>
 
@@ -777,6 +873,8 @@
     <p><strong>Davet kodu ve grup kodu.</strong> Bağlantıyı kurmanın bir yolu da velinizin ya da öğretmeninizin size verdiği 6 karakterlik koddur. Kodu girdiğinizde kimin, hangi bağla (veli ya da öğretmen/koç) bağlanacağı ve neleri göreceği gösterilir; bağlantı ancak siz onaylarsanız kurulur. Öğretmeninizin grup koduyla katılırsanız grubun adını görürsünüz; öğretmeniniz de sizi o grupta görür.</p>
 
     <p><strong>Öğretmen notları.</strong> Öğretmen/koç bağıyla bağlı denetmeniniz size kısa notlar yazabilir (en fazla 200 karakter, günde en fazla 3). Notlar otomatik içerik denetiminden geçer ve diğer denetmenleriniz (örneğin veliniz) tarafından da görülebilir. Notlara yalnızca hazır cevaplarla yanıt verebilirsiniz. Uygunsuz bulduğunuz bir notu bildirebilirsiniz; bildirilen notlar incelenir. Bağlantıyı kaldırdığınızda o kişi size yeni not yazamaz.</p>
+
+    <p><strong>Destek tepkileri.</strong> Bağlı denetmenleriniz (veli ya da öğretmen) size hazır bir listeden kısa destek tepkileri gönderebilir (öğrenci başına günde bir). Serbest mesaj yazılamaz; tepkileri okuyup silebilirsiniz.</p>
 
     <p><strong>Herkese açık profil.</strong> Ad-soyadınız, avatarınız, puanınız ve lig sıralamanız uygulamayı kullanan diğer öğrenciler tarafından görülebilir. Bunlar lig ve sınıf özelliklerinin çalışması için gereken asgari bilgilerdir.</p>
 
@@ -917,8 +1015,8 @@
       <li>Kredi paketleri: <strong>120 kredi 49₺ · 300 kredi 119₺ · 500 kredi 189₺</strong></li>
       <li><strong>Kredilerin son kullanma tarihi yoktur.</strong> Satın aldığınız krediler zamanla erimez.</li>
       <li>Cebinizde aynı anda en fazla <strong>1.000 kredi</strong> bulunabilir; bu sınırı aşacak satın alma yapılamaz.</li>
-      <li>Kredi satın alabilmek ve harcayabilmek için <strong>Pro aboneliğinizin aktif olması gerekir.</strong></li>
-      <li><strong>Aboneliğiniz sona ererse krediniz SİLİNMEZ, dondurulur.</strong> Yeniden abone olduğunuzda kaldığı yerden kullanılmaya devam eder.</li>
+      <li>Kredi satın alabilmek için <strong>Pro aboneliğinizin aktif olması gerekir.</strong> Satın aldığınız krediler abonelik bittikten sonra da kullanılabilir.</li>
+      <li><strong>Aboneliğiniz sona ererse krediniz silinmez;</strong> kullanmaya devam edebilirsiniz.</li>
       <li>Krediler geri alınamaz, devredilemez ve nakde çevrilemez.</li>
       <li>Gönderdiğiniz görsel ya da metin bir ders sorusu değilse (örneğin bir sosyal medya gönderisi) çözüm üretilmez ve hakkınız düşmez.</li>
     </ul>
@@ -929,7 +1027,8 @@
       <li>Pro aboneliğe bağlı <strong>7 günlük</strong> ücretsiz deneme, daha önce hiçbir Dirayz aboneliğinden veya denemesinden yararlanmamış kullanıcılara bir defaya mahsus sunulur.</li>
       <li>Deneme süresi <strong>tüm kullanıcılar için aynıdır</strong>; referans kodu deneme süresini uzatmaz.</li>
       <li>Deneme süresi boyunca toplam <strong>30 yapay zekâ hakkı</strong> tanınır. Her hak, bir koç mesajı veya bir soru çözümü için kullanılabilir.</li>
-      <li>Deneme, süre bitiminden en az 24 saat önce iptal edilmediği takdirde ücretli Pro aboneliğe dönüşür ve ilk dönem ücreti tahsil edilir.</li>
+      <li>Denemeyi başlatmak için e-posta adresinizin doğrulanmış olması gerekir.</li>
+      <li>Bugün uygulamada ödeme altyapısı bulunmadığından deneme bitince hesabınız ücretsiz seviyeye döner ve ücret alınmaz. Ödemeler açıldığında deneme mağaza üzerinden sunulacak; süre bitiminden en az 24 saat önce iptal edilmezse ücretli Pro aboneliğe dönüşecek ve ilk dönem ücreti tahsil edilecektir.</li>
     </ul>
 
     <hr />
@@ -1106,9 +1205,9 @@
     <h2>2. İşlenen kişisel veriler</h2>
     <p><strong>Kimlik ve iletişim verileri:</strong> Ad, soyad (isteğe bağlı), e-posta adresi, doğum tarihi (yalnızca öğrencilerden), cinsiyet (isteğe bağlı); Google veya Apple ile girişte bu hizmetlerin sağladığı hesap kimliği</p>
     <p><strong>Eğitim ve profil verileri:</strong> Hazırlanılan sınav ve düzeyi/oturumu (YKS, LGS, MSÜ, KPSS, DGS, ALES), alan bilgisi, hedef okul/kurum/bölüm, yaşadığınız şehir, kendinizi tanıttığınız kısa metin</p>
-    <p><strong>Kullanım verileri:</strong> Çalışma süreleri, kronometre kayıtları, soru defteri kayıtları ve fotoğrafları, deneme sonuçları, çalışma programları ve programa eklenen YouTube oynatma listesi bağlantıları, yapay zekâ koç sohbet geçmişi, Etüt panosu mesajları ve fotoğrafları, öğretmenlerinizin size yazdığı notlar ve verdiğiniz hazır cevaplar</p>
+    <p><strong>Kullanım verileri:</strong> Çalışma süreleri, kronometre kayıtları, soru defteri kayıtları ve fotoğrafları, deneme sonuçları, çalışma programları ve programa eklenen YouTube oynatma listesi bağlantıları, yapay zekâ koç sohbet geçmişi, Etüt panosu mesajları ve fotoğrafları, öğretmenlerinizin size yazdığı notlar ve verdiğiniz hazır cevaplar, denetmenlerinizin gönderdiği hazır destek tepkileri</p>
     <p><strong>Üyelik verileri:</strong> Abonelik durumu, ücretsiz deneme kaydı, yapay zekâ kredi bakiyesi ve kullanım sayaçları</p>
-    <p><strong>İşlem güvenliği verileri:</strong> Uygulama içi etkinlik kayıtları, cihaz bildirim kimliği</p>
+    <p><strong>İşlem güvenliği verileri:</strong> Uygulama içi etkinlik kayıtları, cihaz bildirim kimliği, uygulama doğrulama (App Check) bilgisi</p>
     <p>Soru Defteri fotoğraflarınız hesabınıza bağlı olarak saklanır ve yalnızca size gösterilir; denetmenleriniz ve diğer kullanıcılar göremez.</p>
 
     <hr />
@@ -1138,13 +1237,14 @@
     <hr />
     <h2>5. Kişisel verilerin aktarılması</h2>
     <ul>
-      <li><strong>Google LLC</strong> (Firebase, Google ile giriş, Cloud Vision, YouTube API Hizmetleri): Kimlik doğrulama, veritabanı, dosya depolama, içerik denetimi, bildirim ve oynatma listelerindeki video bilgilerinin alınması</li>
+      <li><strong>Google LLC</strong> (Firebase, Google ile giriş, Cloud Vision, YouTube API Hizmetleri): Kimlik doğrulama, veritabanı, dosya depolama, içerik denetimi, uygulama doğrulama (App Check, Play Integrity) ve oynatma listelerindeki video bilgilerinin alınması</li>
+      <li><strong>Apple Inc.</strong> (App Attest): iPhone/iPad'de uygulama doğrulama</li>
       <li><strong>Apple Inc.</strong> (Apple ile giriş): Bu yöntemle giriş yapmayı seçerseniz kimlik doğrulama</li>
       <li><strong>OpenAI, L.L.C.</strong> (ABD): Yapay zekâ koç ve soru çözdürme; programa eklenen video başlıklarının konulara eşleştirilmesi (kişisel veri içermez)</li>
-      <li><strong>Functional Software, Inc.</strong> (Sentry, ABD): Hata ve çökme raporları</li>
+      <li><strong>Functional Software, Inc.</strong> (Sentry, ABD; veriler AB'de, Almanya'da tutulur): Uygulama hata ve çökme raporları</li>
       <li><strong>650 Industries, Inc.</strong> (Expo, ABD): Anlık bildirimlerin iletilmesi</li>
       <li><strong>Railway Corp.</strong> (ABD): Sunucu barındırma</li>
-      <li><strong>Google Play</strong> (Google LLC), <strong>Apple App Store</strong> (Apple Inc.) ve <strong>RevenueCat, Inc.</strong>: Abonelik ve kredi satın alımlarının doğrulanması ve ödeme işlemlerinin yürütülmesi</li>
+      <li><strong>Google Play</strong> (Google LLC), <strong>Apple App Store</strong> (Apple Inc.) ve <strong>RevenueCat, Inc.</strong>: Ödemeler açıldığında abonelik ve kredi satın alımlarının doğrulanması ve ödeme işlemlerinin yürütülmesi (şu anda uygulamada satın alma yoktur)</li>
     </ul>
     <p>Verileriniz pazarlama amacıyla üçüncü taraflara satılmaz veya devredilmez.</p>
 
@@ -1152,21 +1252,22 @@
     <p>Yukarıda sayılan hizmet sağlayıcıların sunucuları <strong>yurt dışında bulunmaktadır</strong>. Hizmetin sunulabilmesi için kişisel verilerinizin bu sunuculara aktarılması teknik bir zorunluluktur.</p>
     <p><strong>Hangi veri, nereye, neden aktarılıyor:</strong></p>
     <ul>
-      <li><strong>Google Firebase (Google LLC):</strong> Hesap bilgileriniz, çalışma ve kullanım verileriniz, Soru Defteri ve Etüt panosu fotoğraflarınız — kimlik doğrulama, veritabanı, dosya depolama ve bildirim hizmetleri için.</li>
+      <li><strong>Google Firebase (Google LLC):</strong> Hesap bilgileriniz, çalışma ve kullanım verileriniz, Soru Defteri ve Etüt panosu fotoğraflarınız — kimlik doğrulama, veritabanı, dosya depolama hizmetleri için.</li>
+      <li><strong>Firebase App Check (Google LLC), Google Play Integrity ve Apple App Attest:</strong> Uygulamanın ve cihazın doğrulanması için gereken teknik bilgi — kötüye kullanımın önlenmesi için; hesap ve çalışma verileriniz gönderilmez.</li>
       <li><strong>Google ile giriş (Google LLC) ve Apple ile giriş (Apple Inc.):</strong> Yalnızca bu yöntemle giriş yaparsanız e-posta adresiniz ve oturum kimliğiniz — kimlik doğrulama için. Şifrenizi biz görmeyiz.</li>
-      <li><strong>OpenAI, L.L.C. (ABD):</strong> Yapay zekâ koça yazdığınız mesajlar, sohbet geçmişi ve özeti; koçun yanıtı kişiselleştirebilmesi için adınız, sınav türünüz ve alanınız, sınıf/not açıklamanız, şehriniz, hedef okul ve bölümünüz, koça verdiğiniz ad ve kişilik tarifi; çalışma özetiniz (bugünkü ve haftalık çalışma süreniz, program ilerlemeniz, deneme netleriniz); çözdürmek üzere gönderdiğiniz sorunun fotoğrafı ya da metni ve ders adı — yalnızca bu iki özelliği kullandığınızda, uygulama içinde bunun için ayrıca açık izin verdikten sonra ve yalnızca yanıt üretilirken OpenAI'a iletilir ve model eğitiminde kullanılmaz; OpenAI yalnızca kötüye kullanımı denetlemek için en fazla 30 gün tutabilir. 18 yaşından küçük kullanıcılar bu izni yalnızca veli/vasi onayını uygulama içinde beyan ederek verebilir. Koç sohbet geçmişiniz, size kesintisiz hizmet sunabilmek için Dirayz hesabınızda saklanır; çözdürdüğünüz sorular ise siz Soru Defteri'ne kaydetmedikçe saklanmaz. Bu izni uygulamada <em>Ayarlar → Daha Fazlası → Yapay zekâ izni</em> bölümünden geri alabilirsiniz. Programa YouTube oynatma listesi eklediğinizde listedeki herkese açık video başlıkları da konulara eşleştirilmek üzere OpenAI'a gönderilir; bu gönderimde sizinle ilgili bilgi yer almaz.</li>
+      <li><strong>OpenAI, L.L.C. (ABD):</strong> Yapay zekâ koça yazdığınız mesajlar, sohbet geçmişi ve özeti; koçun yanıtı kişiselleştirebilmesi için adınız, sınav türünüz ve alanınız, sınıf/not açıklamanız, şehriniz, hedef okul ve bölümünüz, koça verdiğiniz ad ve kişilik tarifi; çalışma özetiniz (bugünkü ve haftalık çalışma süreniz, program ilerlemeniz, deneme netleriniz); sınavınızla ilgili notunuz; çözdürmek üzere gönderdiğiniz sorunun fotoğrafı ya da metni ve ders adı; koç yanıt veremediğinde mesajınız ayrıca kendine zarar riski açısından OpenAI'ın içerik denetimi hizmetinden geçirilir — yalnızca bu iki özelliği kullandığınızda, uygulama içinde bunun için ayrıca açık izin verdikten sonra ve yalnızca yanıt üretilirken OpenAI'a iletilir ve model eğitiminde kullanılmaz; OpenAI yalnızca kötüye kullanımı denetlemek için en fazla 30 gün tutabilir. 18 yaşından küçük kullanıcılar bu izni yalnızca veli/vasi onayını uygulama içinde beyan ederek verebilir. Koç sohbet geçmişiniz, size kesintisiz hizmet sunabilmek için Dirayz hesabınızda saklanır; çözdürdüğünüz sorular ise siz Soru Defteri'ne kaydetmedikçe saklanmaz. Bu izni uygulamada <em>Ayarlar → Daha Fazlası → Yapay zekâ izni</em> bölümünden geri alabilirsiniz. Programa YouTube oynatma listesi eklediğinizde listedeki herkese açık video başlıkları da konulara eşleştirilmek üzere OpenAI'a gönderilir; bu gönderimde sizinle ilgili bilgi yer almaz.</li>
       <li><strong>Google Cloud Vision (Google LLC):</strong> Etüt panosuna gönderilen fotoğraflar — yalnızca otomatik içerik denetimi için.</li>
-      <li><strong>Sentry (Functional Software, Inc., ABD):</strong> Hata anında cihaz modeli, işletim sistemi, uygulama sürümü ve hatanın teknik ayrıntıları — hataların tespiti ve giderilmesi için.</li>
+      <li><strong>Sentry (Functional Software, Inc., ABD; veriler AB'de, Almanya'da tutulur):</strong> Hata anında cihaz modeli, işletim sistemi, uygulama sürümü ve hatanın teknik ayrıntıları — hataların tespiti ve giderilmesi için.</li>
       <li><strong>Expo (650 Industries, Inc., ABD):</strong> Cihazınıza ait anonim bildirim adresi — anlık bildirimlerin iletilmesi için.</li>
       <li><strong>Railway Corp. (ABD):</strong> Uygulamanın sunucuya gönderdiği istekler — sunucu barındırma için.</li>
-      <li><strong>Google Play (Google LLC), Apple App Store (Apple Inc.) ve RevenueCat, Inc.:</strong> Anonim kullanıcı tanımlayıcısı, abonelik/kredi satın alma durumu ve tarihi — satın alma doğrulaması ve ödeme işlemleri için.</li>
+      <li><strong>Google Play (Google LLC), Apple App Store (Apple Inc.) ve RevenueCat, Inc.:</strong> Ödemeler açıldığında: anonim kullanıcı tanımlayıcısı, abonelik/kredi satın alma durumu ve tarihi — satın alma doğrulaması ve ödeme işlemleri için.</li>
     </ul>
     <p>Bu aktarımlar KVKK'nın <strong>9. maddesi</strong> kapsamında <strong>açık rızanıza</strong> dayanılarak gerçekleştirilir. Uygulamaya kayıt olarak ve kullanmaya devam ederek bu aktarıma açık rıza vermiş sayılırsınız.</p>
     <p><strong>Rızanızı geri çekme:</strong> Açık rızanızı istediğiniz zaman geri çekebilirsiniz. Bunun için hesabınızı uygulama içinden silebilir veya destek@dirayz.com adresine başvurabilirsiniz. Ancak yukarıdaki aktarımlar hizmetin teknik altyapısını oluşturduğundan, rızanın geri çekilmesi hâlinde hizmeti sunmamız mümkün olmayacak ve hesabınız kapatılacaktır.</p>
 
     <hr />
     <h2>6. Denetmen sistemi kapsamında veri paylaşımı</h2>
-    <p>Bir veli veya öğretmeni denetmen olarak <strong>açıkça onaylamanız</strong> hâlinde, aşağıdaki veriler o kişiyle paylaşılır: kronometre kayıtlarınız, ders bazlı çalışma dağılımınız, denetmenle paylaşmayı seçtiğiniz programlardaki tamamlanma oranı (kendi programlarınız varsayılan olarak paylaşılmaz), deneme sonuçlarınız ve haftalık ve aylık özet raporlar. Öğretmen/koç olarak bağlı denetmen size program atayabilir; atadığı programı ve ilerlemenizi görür.</p>
+    <p>Bir veli veya öğretmeni denetmen olarak <strong>açıkça onaylamanız</strong> hâlinde, aşağıdaki veriler o kişiyle paylaşılır: kronometre kayıtlarınız, ders bazlı çalışma dağılımınız, denetmenle paylaşmayı seçtiğiniz programlardaki tamamlanma oranı (kendi programlarınız varsayılan olarak paylaşılmaz), deneme sonuçlarınız, toplam puanınız ve lig sıralamanız, haftalık özetiniz ve her ay gönderilen özet bildirimi. Denetmenleriniz size hazır listeden kısa destek tepkileri de gönderebilir. Öğretmen/koç olarak bağlı denetmen size program atayabilir; atadığı programı ve ilerlemenizi görür.</p>
     <p>Paylaşmadığınız programlarınızın içeriği, soru defteriniz, sınıf bilgileriniz, Etüt mesajlarınız ve yapay zekâ koç sohbetleriniz denetmenle <strong>paylaşılmaz</strong>. Onayınızı istediğiniz an geri çekebilirsiniz.</p>
 
     <hr />
