@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.get_login_creds"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.derecelab.app",
+    "sha256_cert_fingerprints": ["58:42:B5:48:05:22:5F:55:FA:8B:5B:BC:B0:6D:AE:30:55:94:E9:18:6E:4C:2F:53:C2:F9:F9:B1:E6:B5:A6:E7"]
+  }
+}]
