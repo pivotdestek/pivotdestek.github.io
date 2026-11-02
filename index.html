@@ -1536,11 +1536,24 @@
     apple: "https://apps.apple.com/tr/app/dirayz-yks-lgs-kpss-disiplin/id6815436081?l=tr"
   };
   var APPLE_YEDEK = "https://apps.apple.com/tr/search?term=dirayz";
+  // Android'de Google Play bağlantıları Play Store uygulamasını doğrudan açar (Instagram, TikTok,
+  // Facebook gibi uygulama içi tarayıcılarda Play'in web sayfası açılıp girişe takılmasın diye).
+  // Play Store yoksa tarayıcı web sayfasına döner. Aynı adres /indir sayfasında da var (indir.html).
+  var PLAY_INTENT = "intent://details?id=com.derecelab.app#Intent;scheme=market;package=com.android.vending;S.browser_fallback_url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.derecelab.app;end";
+  var androidMu = /Android/i.test(navigator.userAgent || "");
 
   var magazaBaglantilari = document.querySelectorAll("[data-magaza]");
   for (var m = 0; m < magazaBaglantilari.length; m++) {
     var tur = magazaBaglantilari[m].getAttribute("data-magaza");
-    magazaBaglantilari[m].href = tur === "apple" ? (MAGAZA.apple || APPLE_YEDEK) : MAGAZA.play;
+    if (tur === "apple") {
+      magazaBaglantilari[m].href = MAGAZA.apple || APPLE_YEDEK;
+    } else if (androidMu) {
+      magazaBaglantilari[m].href = PLAY_INTENT;
+      // Yeni sekme açılmasın: uygulama içi tarayıcı isteği aynı sayfada alıp Play Store'a versin.
+      magazaBaglantilari[m].removeAttribute("target");
+    } else {
+      magazaBaglantilari[m].href = MAGAZA.play;
+    }
   }
 
   // ── Görünümler ────────────────────────────────────────────────────
