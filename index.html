@@ -405,6 +405,14 @@
     .content { padding: 28px 16px 64px; }
     .magaza { min-width: 0; flex: 1 1 100%; justify-content: center; }
   }
+  /* Menü 761–960 px'te de açılır (☰): Rehber bağlantısıyla tek satıra sığmıyor (6 Kasım 2026). */
+  @media (min-width: 761px) and (max-width: 960px) {
+    .menu { position: absolute; left: 0; right: 0; top: 66px; flex-direction: column; align-items: stretch; gap: 2px; padding: 12px 20px 18px; background: var(--lacivert); border-bottom: 1px solid rgba(255,255,255,0.1); display: none; }
+    .menu.acik { display: flex; }
+    .menu a { padding: 12px 10px; font-size: 16px; border-radius: 10px; }
+    .menu .dugme { margin: 8px 0 0; justify-content: center; }
+    .menu-dugme { display: inline-flex; }
+  }
   @media (prefers-reduced-motion: reduce) {
     .gorunum.acik, .doc.active { animation: none; }
     .dugme, .magaza { transition: none; }
@@ -420,6 +428,7 @@
         <a href="#" data-bolum="ozellikler">Özellikler</a>
         <a href="#" data-bolum="yapay-zeka">Yapay zekâ</a>
         <a href="#" data-bolum="guven">Güven</a>
+        <a href="/rehber/">Rehber</a>
         <a href="#hakkimizda" data-git="hakkimizda">Hakkımızda</a>
         <a class="dugme dugme-amber dugme-kucuk" href="#" data-bolum="indir">Uygulamayı indir</a>
       </nav>
@@ -1498,6 +1507,7 @@
             <li><a href="#" data-bolum="ozellikler">Özellikler</a></li>
             <li><a href="#" data-bolum="kimler-icin">Veli ve öğretmen takibi</a></li>
             <li><a href="#" data-bolum="yakinda">Üzerinde çalıştıklarımız</a></li>
+            <li><a href="/rehber/">Kullanım rehberi</a></li>
           </ul>
         </div>
         <div>
